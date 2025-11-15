@@ -1,0 +1,2 @@
+# yosenabe_sakishima_keizai_maps
+崎島経済サーバーのインタラクトマップを管理するリポジトリ。
