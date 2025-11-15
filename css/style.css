@@ -1,0 +1,83 @@
+/* 余白を削除しつつスクロールを禁止 */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* マップの表示範囲 */
+#map {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    margin: 0;
+}
+
+/* ピン色 */
+/* 青 */
+.icon-blue {
+    filter: hue-rotate(0deg);
+}
+/* 赤 */
+.icon-red {
+    filter: hue-rotate(150deg);
+}
+/* 緑 */
+.icon-green {
+    filter: hue-rotate(250deg);
+}
+/* 黄 */
+.icon-orange {
+    filter: hue-rotate(190deg);
+}
+/* 紫 */
+.icon-purple {
+    filter: hue-rotate(90deg);
+}
+/* 灰 */
+.icon-gray {
+    filter: grayscale(100%) brightness(0.6)
+            drop-shadow(1px 1px 0 #fff)
+            drop-shadow(-1px 1px 0 #fff)
+            drop-shadow(1px -1px 0 #fff)
+            drop-shadow(-1px -1px 0 #fff);
+}
+
+/* 座標表示のスタイル */
+.leaflet-control-attribution .map-coordinates {
+    padding: 4px 4px 8px 6px;
+    border-radius: 3px;
+    font-size: 13px;  /* "Leaflet" の文字サイズに合わせる */
+}
+
+/* ラインラベル */
+.line-label {
+    background: transparent;
+    border: black;
+    box-shadow: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black;
+}
+/* .line-label クラスを持つツールチップを非表示にする */
+.zoom-labels-hidden .line-label {
+    display: none;
+}
+
+/* アンチエイリアシングをかける */
+.leaflet-image-layer {
+    image-rendering: auto;
+    -ms-interpolation-mode: auto;
+}
+
+/* アンチエイリアシングを解除 */
+.map-pixelated .leaflet-image-layer {
+    image-rendering: -moz-crisp-edges !important; /* Firefox */
+    image-rendering: -webkit-crisp-edges !important; /* Webkit */
+    image-rendering: pixelated !important; /* 現代のブラウザ */
+    image-rendering: crisp-edges !important; /* 互換性のため */
+    -ms-interpolation-mode: nearest-neighbor !important; /* IE */
+}
