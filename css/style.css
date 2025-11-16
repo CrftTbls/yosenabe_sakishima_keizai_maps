@@ -52,6 +52,17 @@ html, body {
     font-size: 13px;  /* "Leaflet" の文字サイズに合わせる */
 }
 
+/* ポップアップ内のテキストサイズ */
+.leaflet-popup-content {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+/* ツールチップ内のテキストサイズ */
+.leaflet-tooltip {
+    font-size: 1.2em;
+}
+
 /* ラインラベル */
 .line-label {
     background: transparent;
