@@ -119,10 +119,10 @@ tileLayer.on('loading', function() {
   if (loadTimer) {
     clearTimeout(loadTimer);
   }
-  // 5秒後にスピナーを表示するタイマーをセット
+  // 指定秒後にスピナーを表示するタイマーをセット
   loadTimer = setTimeout(function() {
-    loader.style.display = 'flex'; // 5秒経過したらスピナーを表示
-  }, 5000); // ミリ秒単位
+    loader.style.display = 'flex'; // 指定秒数経過したらスピナーを表示
+  }, 3000); // ミリ秒単位
 });
 
 // すべてのタイルの読み込み完了
