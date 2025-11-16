@@ -11,6 +11,30 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// ストレージの永続化をリクエスト
+if (navigator.storage && navigator.storage.persist) {
+  // 現在の永続化状態を確認
+  navigator.storage.persisted().then((isPersisted) => {
+
+    if (isPersisted) {
+      console.log('ストレージは既に永続化されています。');
+
+    } else {
+      console.log('ストレージが永続化されていません。永続化をリクエストします...');
+
+      // 永続化をリクエスト
+      navigator.storage.persist().then((wasGranted) => {
+        if (wasGranted) {
+          console.log('ストレージの永続化が許可されました。');
+        } else {
+          console.log('ストレージの永続化は許可されませんでした。');
+        }
+      });
+
+    }
+  });
+}
+
 
 var mapConfig = {
     //画像のピクセルサイズ
