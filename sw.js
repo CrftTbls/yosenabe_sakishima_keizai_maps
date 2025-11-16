@@ -7,10 +7,10 @@ const MAX_CACHE_SIZE = 100000;
 
 // キャッシュするファイルのリスト
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/main.js',
+  './',
+  './index.html',
+  './css/style.css',
+  './main.js',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
 ];
