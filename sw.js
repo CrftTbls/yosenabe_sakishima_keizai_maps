@@ -2,6 +2,9 @@
 // 画像ファイルを更新した際はここのバージョンをあげる
 const CACHE_NAME = 'tile-cache-v1';
 
+// タイルキャッシュの最大数
+const MAX_CACHE_SIZE = 10000;
+
 // キャッシュするファイルのリスト
 const urlsToCache = [
   '/',
@@ -42,41 +45,47 @@ self.addEventListener('activate', (event) => {
   return self.clients.claim();
 });
 
-// fetchイベント
+// fetch イベント
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
   // リクエストがタイル画像の場合
   if (url.pathname.startsWith('/tiles/') && url.pathname.endsWith('.webp')) {
 
-    // キャッシュを読み取る
     event.respondWith(
-      caches.match(event.request)
-        .then((cachedResponse) => {
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((cachedResponse) => {
+
           // キャッシュに存在する場合
           if (cachedResponse) {
-            // console.log('Cache hit:', event.request.url);
-            // キャッシュから返す
+            // キャッシュの中身を返す
             return cachedResponse;
           }
 
           // キャッシュに存在しない場合
-          // console.log('Cache miss, fetching:', event.request.url);
           return fetch(event.request).then((networkResponse) => {
 
             // ネットワークから取得したレスポンスをキャッシュに保存する
-            return caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, networkResponse.clone());
-
-              // ネットワークから取得したレスポンスをブラウザに返す
-              return networkResponse;
+            return cache.put(event.request, networkResponse.clone()).then(() => {
+              // タイルをキャッシュした後、現在のキャッシュ数をチェック
+              return cache.keys().then((keys) => {
+                if (keys.length > MAX_CACHE_SIZE) {
+                  // 上限を超えていたら一番古いキーを削除する
+                  // console.log(`Cache limit exceeded. Deleting: ${keys[0].url}`);
+                  return cache.delete(keys[0]).then(() => {
+                    return networkResponse; // 削除後、レスポンスを返す
+                  });
+                } else {
+                  return networkResponse; // 上限内で、レスポンスを返す
+                }
+              });
             });
           })
           .catch((error) => {
-            // ネットワークエラー時
             console.error('Fetch failed:', error);
           });
-        })
+        });
+      })
     );
   } else {
     // タイル以外のリクエスト
