@@ -19,7 +19,7 @@ var MyCRS = L.extend({}, L.CRS.Simple, {
     transformation: new L.Transformation(1, 0, -1, 0)
 });
 
-var renderers = L.svg({ padding: 100 });
+var renderers = L.canvas({ padding: 1 });
 
 //Leafletマップの初期化
 var map = L.map('map', {
@@ -610,8 +610,10 @@ var mapContainer = map.getContainer();
 function updatePinVisibility()
 {
   var zoomLevel = map.getZoom();
+  //ズーム倍率がdisplayZoom以上時の処理
   if (zoomLevel >= displayZoom)
   {
+    //ピンを表示
     allMarker.forEach(marker =>
     {
       if (!map.hasLayer(marker))
@@ -619,11 +621,14 @@ function updatePinVisibility()
         map.addLayer(marker);
       }
     });
+    //ラインラベルを非表示
     L.DomUtil.addClass(mapContainer, 'zoom-labels-hidden');
     L.DomUtil.addClass(mapContainer, 'map-pixelated');
   }
+  //ズーム倍率がdisplayZoom未満時の処理
   else
   {
+    //ピンを非表示
     allMarker.forEach(marker =>
     {
       if (map.hasLayer(marker))
@@ -631,6 +636,7 @@ function updatePinVisibility()
         map.removeLayer(marker);
       }
     });
+    //ラインラベルを表示
     L.DomUtil.removeClass(mapContainer, 'zoom-labels-hidden');
     L.DomUtil.removeClass(mapContainer, 'map-pixelated');
   }
