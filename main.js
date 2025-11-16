@@ -48,27 +48,27 @@ var bottomRightX = anchorLeafletX + (mapConfig.imgWidth - mapConfig.anchorPixelX
 
 // var bounds = [ [topLeftY, topLeftX], [bottomRightY, bottomRightX] ];
 var bounds = [ [bottomRightY, topLeftX], [topLeftY, bottomRightX] ];
-L.imageOverlay('images/2025-11-12_23.10.12_x-5632_z-3072.png', bounds).addTo(map);
+// L.imageOverlay('images/2025-11-12_23.10.12_x-5632_z-3072.png', bounds).addTo(map);
 
 var tileMaxNativeZoom = 6;
 
-// L.tileLayer('tiles/{z}/{x}/{y}.webp', {
-//   attribution: '崎島経済サーバーマップ',
-//   // bounds: bounds,
-//   noWrap: true,
+L.tileLayer('tiles/{z}/{x}/{y}.webp', {
+  attribution: '崎島経済サーバーマップ',
+  // bounds: bounds,
+  noWrap: true,
 
-//   minZoom: map.minZoom,
-//   maxZoom: map.maxZoom,
+  minZoom: map.minZoom,
+  maxZoom: map.maxZoom,
 
-//   minNativeZoom: 0,
-//   maxNativeZoom: tileMaxNativeZoom,
+  minNativeZoom: 0,
+  maxNativeZoom: tileMaxNativeZoom,
 
-//   // tms: true,
+  // tms: true,
 
-//   keepBuffer: 6,
+  keepBuffer: 10,
 
-//   zoomOffset: tileMaxNativeZoom
-// }).addTo(map);
+  zoomOffset: tileMaxNativeZoom
+}).addTo(map);
 
 map.fitBounds(bounds);
 
