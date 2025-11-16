@@ -110,13 +110,30 @@ var tileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
 
 var loader = L.DomUtil.get('loader');
 
-// タイルの読み込み中にスピナーを表示
+// setTimeoutのタイマーIDを保持するための変数を追加
+var loadTimer = null;
+
+// タイルの読み込み中
 tileLayer.on('loading', function() {
-  loader.style.display = 'flex'; // スピナーを表示
+  // 既にタイマーが動いていたらリセット
+  if (loadTimer) {
+    clearTimeout(loadTimer);
+  }
+  // 5秒後にスピナーを表示するタイマーをセット
+  loadTimer = setTimeout(function() {
+    loader.style.display = 'flex'; // 5秒経過したらスピナーを表示
+  }, 5000); // ミリ秒単位
 });
-// すべてのタイルが読み込み完了
+
+// すべてのタイルの読み込み完了
 tileLayer.on('load', function() {
-  loader.style.display = 'none'; // スピナーを非表示
+  // 5秒タイマーを解除
+  if (loadTimer) {
+    clearTimeout(loadTimer);
+    loadTimer = null;
+  }
+  // スピナーを非表示にする
+  loader.style.display = 'none';
 });
 
 map.fitBounds(bounds);
