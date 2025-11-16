@@ -49,8 +49,11 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
+  // GitHub Pages のリポジトリ名
+  const REPO_NAME = '/yosenabe_sakishima_keizai_maps';
+
   // リクエストがタイル画像の場合
-  if (url.pathname.startsWith('/tiles/') && url.pathname.endsWith('.webp')) {
+  if (url.pathname.startsWith(REPO_NAME + '/tiles/') && url.pathname.endsWith('.webp')) {
 
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) => {
