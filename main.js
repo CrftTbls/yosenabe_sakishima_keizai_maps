@@ -52,7 +52,7 @@ var bounds = [ [bottomRightY, topLeftX], [topLeftY, bottomRightX] ];
 
 var tileMaxNativeZoom = 6;
 
-L.tileLayer('tiles/{z}/{x}/{y}.png', {
+L.tileLayer('tiles/{z}/{x}/{y}.webp', {
   attribution: '崎島経済サーバーマップ',
   // bounds: bounds,
   noWrap: true,
