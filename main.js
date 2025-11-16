@@ -65,6 +65,8 @@ L.tileLayer('tiles/{z}/{x}/{y}.png', {
 
   // tms: true,
 
+  keepBuffer: 6,
+
   zoomOffset: tileMaxNativeZoom
 }).addTo(map);
 
