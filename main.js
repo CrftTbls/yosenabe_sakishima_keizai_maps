@@ -1,3 +1,17 @@
+// Service Workerの登録
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js') // sw.jsのパス（ルートからの絶対パス）
+      .then((registration) => {
+        console.log('Service Worker registered: ', registration);
+      })
+      .catch((error) => {
+        console.log('Service Worker registration failed: ', error);
+      });
+  });
+}
+
+
 var mapConfig = {
     //画像のピクセルサイズ
     imgWidth: 9216,
