@@ -15,8 +15,16 @@ var mapConfig = {
 var anchorLeafletY = mapConfig.anchorGameZ;
 var anchorLeafletX = mapConfig.anchorGameX;
 
+var transformation = new L.Transformation(
+    1, // a (Xスケール)
+    mapConfig.anchorPixelX - mapConfig.anchorGameX, // b (Xオフセット)
+    -1, // c (Yスケール, L.CRS.Simple 標準)
+    mapConfig.anchorPixelY - mapConfig.anchorGameZ  // d (Yオフセット)
+);
+
 var MyCRS = L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1, 0, -1, 0)
+  // transformation: new L.Transformation(1, 0, -1, 0)
+  transformation: transformation
 });
 
 var renderers = L.canvas({ padding: 1 });
@@ -24,8 +32,8 @@ var renderers = L.canvas({ padding: 1 });
 //Leafletマップの初期化
 var map = L.map('map', {
     crs: MyCRS,
-    minZoom: -2.5,
-    maxZoom: 4,
+    minZoom: -2,
+    maxZoom: 2,
     zoomSnap: 0.25,
     zoomDelta: 0.25,
     wheelPxPerZoomLevel: 120,
@@ -38,12 +46,33 @@ var topLeftX = anchorLeafletX - mapConfig.anchorPixelX;
 var bottomRightY = anchorLeafletY + (mapConfig.imgHeight - mapConfig.anchorPixelY);
 var bottomRightX = anchorLeafletX + (mapConfig.imgWidth - mapConfig.anchorPixelX);
 
-var bounds = [ [topLeftY, topLeftX], [bottomRightY, bottomRightX] ];
-L.imageOverlay('images/2025-11-12_23.10.12_x-5632_z-3072.png', bounds).addTo(map);
+// var bounds = [ [topLeftY, topLeftX], [bottomRightY, bottomRightX] ];
+var bounds = [ [bottomRightY, topLeftX], [topLeftY, bottomRightX] ];
+// L.imageOverlay('images/2025-11-12_23.10.12_x-5632_z-3072.png', bounds).addTo(map);
+
+var tileMaxNativeZoom = 6;
+
+L.tileLayer('tiles/{z}/{x}/{y}.png', {
+  attribution: '崎島経済サーバーマップ',
+  // bounds: bounds,
+  noWrap: true,
+
+  minZoom: map.minZoom,
+  maxZoom: map.maxZoom,
+
+  minNativeZoom: 0,
+  maxNativeZoom: tileMaxNativeZoom,
+
+  // tms: true,
+
+  zoomOffset: tileMaxNativeZoom
+}).addTo(map);
 
 map.fitBounds(bounds);
 
-map.setView(convertCoord(anchorLeafletY, anchorLeafletX));
+map.setView(convertCoord(anchorLeafletY, anchorLeafletX), -1);
+
+map.setMaxBounds(bounds);
 
 //ピン
 {
@@ -623,7 +652,7 @@ function updatePinVisibility()
     });
     //ラインラベルを非表示
     L.DomUtil.addClass(mapContainer, 'zoom-labels-hidden');
-    L.DomUtil.addClass(mapContainer, 'map-pixelated');
+    // L.DomUtil.addClass(mapContainer, 'map-pixelated');
   }
   //ズーム倍率がdisplayZoom未満時の処理
   else
@@ -638,7 +667,7 @@ function updatePinVisibility()
     });
     //ラインラベルを表示
     L.DomUtil.removeClass(mapContainer, 'zoom-labels-hidden');
-    L.DomUtil.removeClass(mapContainer, 'map-pixelated');
+    // L.DomUtil.removeClass(mapContainer, 'map-pixelated');
   }
 }
 
