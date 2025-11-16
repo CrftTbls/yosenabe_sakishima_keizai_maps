@@ -90,7 +90,7 @@ var bounds = [ [bottomRightY, topLeftX], [topLeftY, bottomRightX] ];
 
 var tileMaxNativeZoom = 6;
 
-L.tileLayer('tiles/{z}/{x}/{y}.webp', {
+var tileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
   attribution: '崎島経済サーバーマップ',
   // bounds: bounds,
   noWrap: true,
@@ -107,6 +107,17 @@ L.tileLayer('tiles/{z}/{x}/{y}.webp', {
 
   zoomOffset: tileMaxNativeZoom
 }).addTo(map);
+
+var loader = L.DomUtil.get('loader');
+
+// タイルの読み込み中にスピナーを表示
+tileLayer.on('loading', function() {
+  loader.style.display = 'flex'; // スピナーを表示
+});
+// すべてのタイルが読み込み完了
+tileLayer.on('load', function() {
+  loader.style.display = 'none'; // スピナーを非表示
+});
 
 map.fitBounds(bounds);
 
