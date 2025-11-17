@@ -65,7 +65,7 @@ var MyCRS = L.extend({}, L.CRS.Simple, {
   transformation: transformation
 });
 
-var renderers = L.canvas({ padding: 1 });
+var renderers = L.canvas({ padding: 0.5 });
 
 //Leafletマップの初期化
 var map = L.map('map', {
@@ -518,7 +518,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   kurowaPoly.bindTooltip("<b>黒輪</b>", {
     permanent: true,
@@ -538,7 +539,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   shirakiPoly.bindTooltip("<b>白木</b>", {
     permanent: true,
@@ -558,7 +560,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   hotaruPoly.bindTooltip("<b>穂樽</b>", {
     permanent: true,
@@ -578,7 +581,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   nekonoharaPoly.bindTooltip("<b>猫ノ原</b>", {
     permanent: true,
@@ -598,7 +602,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   kurafutoPoly.bindTooltip("<b>蔵太</b>", {
     permanent: true,
@@ -624,7 +629,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   minaminaritaPoly.bindTooltip("<b>南成田</b>", {
     permanent: true,
@@ -644,7 +650,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   shiomiPoly.bindTooltip("<b>汐見</b>", {
     permanent: true,
@@ -664,7 +671,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   gouyaPoly.bindTooltip("<b>轟谷</b>", {
     permanent: true,
@@ -684,7 +692,8 @@ map.setMaxBounds(bounds);
       weight: lineWeight,
       opacity: lineOpacity,
       fillOpacity: fillOpacity,
-      noClip: true
+      noClip: true,
+      smoothFactor: 2.0
     }).addTo(map);
   shintendaiPoly.bindTooltip("<b>新天台</b>", {
     permanent: true,
