@@ -695,7 +695,7 @@ map.setMaxBounds(bounds);
       smoothFactor: 2.0
     }).addTo(map);
   shintendaiPoly.bindTooltip("<b>新天台</b>", {
-    // permanent: true,
+    permanent: true,
     direction: "center",
     className: "line-label"
   });
