@@ -35,7 +35,6 @@ if (navigator.storage && navigator.storage.persist) {
   });
 }
 
-
 var mapConfig = {
     //画像のピクセルサイズ
     imgWidth: 9216,
@@ -65,7 +64,7 @@ var MyCRS = L.extend({}, L.CRS.Simple, {
   transformation: transformation
 });
 
-var renderers = L.canvas({ padding: 0.5 });
+var renderers = L.svg({ padding: 0.5 });
 
 //Leafletマップの初期化
 var map = L.map('map', {
@@ -759,8 +758,22 @@ map.on('zoomend', updatePinVisibility);
 // 初期表示時にピンの表示/非表示を設定
 updatePinVisibility();
 
+// 連続して呼ばれる関数を、指定した時間（limit）に1回だけ実行するように制限する
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
 //マウスの移動を検知し座標を表示
-map.on('mousemove', function(e) {
+map.on('mousemove', throttle(function(e) {
     // 座標を計算 (Y=Z, X=X のルール)
     var gameZ = Math.floor(e.latlng.lat) * -1;
     var gameX = Math.floor(e.latlng.lng);
@@ -770,7 +783,7 @@ map.on('mousemove', function(e) {
 
     // ★帰属表示コントロール（"Leaflet" の文字）の「前」にHTMLを設定
     map.attributionControl.setPrefix(coordHtml);
-});
+}), 250); // 指定ミリ秒に1回だけ実行
 
 //マウスがマップから外れたら表示をリセット
 map.on('mouseout', function(e) {
