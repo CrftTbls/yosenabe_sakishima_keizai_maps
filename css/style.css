@@ -87,6 +87,23 @@ html, body {
 .leaflet-popup-content {
     font-size: 1.2em;
     line-height: 1.4;
+    margin: 0 0 2px 0;
+}
+
+.leaflet-popup-content :is(h3, image){
+    margin: 0 3px;
+}
+
+.leaflet-popup-content p {
+    margin: 5px 3px 0 3px;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0px;
 }
 
 /* ツールチップ内のテキストサイズ */
