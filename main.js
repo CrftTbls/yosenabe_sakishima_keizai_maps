@@ -98,14 +98,36 @@ var tileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
   maxZoom: map.maxZoom,
 
   minNativeZoom: 0,
-  maxNativeZoom: tileMaxNativeZoom,
+  maxNativeZoom: 4,
 
   // tms: true,
 
   keepBuffer: 10,
 
-  zoomOffset: tileMaxNativeZoom
+  tileSize: 1024,
+
+  zoomOffset: 4
 }).addTo(map);
+
+var inZoomTileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
+  attribution: '崎島経済サーバーマップ',
+  // bounds: bounds,
+  noWrap: true,
+
+  minZoom: map.minZoom,
+  maxZoom: map.maxZoom,
+
+  minNativeZoom: 0,
+  maxNativeZoom: 5,
+
+  // tms: true,
+
+  keepBuffer: 10,
+
+  tileSize: 512,
+
+  zoomOffset: 5
+});
 
 var loader = L.DomUtil.get('loader');
 
@@ -711,39 +733,51 @@ map.on('click', function(e) {
 
 var displayZoom = 0;
 var mapContainer = map.getContainer();
+var changedPin = true;
 
 function updatePinVisibility()
 {
   var zoomLevel = map.getZoom();
+  console.log(zoomLevel);
   //ズーム倍率がdisplayZoom以上時の処理
   if (zoomLevel >= displayZoom)
   {
-    //ピンを表示
-    allMarker.forEach(marker =>
-    {
-      if (!map.hasLayer(marker))
+    // if (changedPin != true)
+    // {
+      console.log("false");
+      changedPin = true;
+      //ピンを表示
+      allMarker.forEach(marker =>
       {
-        map.addLayer(marker);
-      }
-    });
-    //ラインラベルを非表示
-    L.DomUtil.addClass(mapContainer, 'zoom-labels-hidden');
-    L.DomUtil.addClass(mapContainer, 'map-pixelated');
+        if (!map.hasLayer(marker))
+        {
+          map.addLayer(marker);
+        }
+      });
+      //ラインラベルを非表示
+      L.DomUtil.addClass(mapContainer, 'zoom-labels-hidden');
+      L.DomUtil.addClass(mapContainer, 'map-pixelated');
+    // }
   }
   //ズーム倍率がdisplayZoom未満時の処理
   else
   {
-    //ピンを非表示
-    allMarker.forEach(marker =>
-    {
-      if (map.hasLayer(marker))
+    // if (changedPin != false)
+    // {
+      console.log("true");
+      changedPin = false;
+      //ピンを非表示
+      allMarker.forEach(marker =>
       {
-        map.removeLayer(marker);
-      }
-    });
-    //ラインラベルを表示
-    L.DomUtil.removeClass(mapContainer, 'zoom-labels-hidden');
-    L.DomUtil.removeClass(mapContainer, 'map-pixelated');
+        if (map.hasLayer(marker))
+        {
+          map.removeLayer(marker);
+        }
+      });
+      //ラインラベルを表示
+      L.DomUtil.removeClass(mapContainer, 'zoom-labels-hidden');
+      L.DomUtil.removeClass(mapContainer, 'map-pixelated');
+    // }
   }
 }
 
@@ -752,11 +786,47 @@ function convertCoord(x, z)
   return [z * -1, x]
 }
 
+//タイル切り替えのズーム倍率
+var zoomTileLayer = 0
+//タイル切り替えのフラグ
+var changeTile = true;
+
+function updateTileLayer()
+{
+  var zoomLevel = map.getZoom();
+  console.log(zoomLevel);
+  //ズーム倍率がzoomTileLayer以上
+  if (zoomLevel >= zoomTileLayer)
+  {
+    // if (changeTile != true)
+    // {
+      changeTile = true;
+
+      //タイルを切り替える
+      map.removeLayer(tileLayer);
+      inZoomTileLayer.addTo(map);
+    // }
+  }
+  else //ズーム倍率がzoomTileLayer未満
+  {
+    // if (changeTile != false)
+    // {
+      changeTile = false;
+      
+      //タイルを切り替える
+      map.removeLayer(inZoomTileLayer);
+      tileLayer.addTo(map);
+    // }
+  }
+}
+
 //マップがズームされた時にピンの表示/非表示を更新
 map.on('zoomend', updatePinVisibility);
+map.on('zoomend', updateTileLayer);
 
 // 初期表示時にピンの表示/非表示を設定
 updatePinVisibility();
+updateTileLayer();
 
 // 連続して呼ばれる関数を、指定した時間（limit）に1回だけ実行するように制限する
 function throttle(func, limit) {
