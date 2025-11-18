@@ -204,7 +204,9 @@ map.setMaxBounds(bounds);
         x: 126,
         z: 255,
         icon: grayIcon,
-        description: "このサーバーの初期スポーン地点。<br>スポーン後、後ろを向くとチュートリアルを開始するための書見台が置いてある。"
+        image: "./images/spawn_point.webp",
+        description: "このサーバーの初期スポーン地点。<br>\
+                      スポーン後、後ろを向くとチュートリアルを開始するための書見台が置いてある。"
       },
       {
         name: "黒輪駅",
@@ -490,6 +492,7 @@ map.setMaxBounds(bounds);
     markerDataList.forEach(function (data) {
 
       var popupHTML = `
+          <image src="${data.image}" alt="${data.name}" style="max-width:100%;height:auto;"><br>
           <h3>${data.name}</h3>
           <p>${data.description}<br><b>座標: Z=${data.z}, X=${data.x}</b></p>
         `
