@@ -742,8 +742,6 @@ function updatePinVisibility()
   //ズーム倍率がdisplayZoom以上時の処理
   if (zoomLevel >= displayZoom)
   {
-    // if (changedPin != true)
-    // {
       console.log("false");
       changedPin = true;
       //ピンを表示
@@ -754,16 +752,13 @@ function updatePinVisibility()
           map.addLayer(marker);
         }
       });
-      //ラインラベルを非表示
       L.DomUtil.addClass(mapContainer, 'zoom-labels-hidden');
       L.DomUtil.addClass(mapContainer, 'map-pixelated');
-    // }
+
   }
   //ズーム倍率がdisplayZoom未満時の処理
   else
   {
-    // if (changedPin != false)
-    // {
       console.log("true");
       changedPin = false;
       //ピンを非表示
@@ -777,7 +772,6 @@ function updatePinVisibility()
       //ラインラベルを表示
       L.DomUtil.removeClass(mapContainer, 'zoom-labels-hidden');
       L.DomUtil.removeClass(mapContainer, 'map-pixelated');
-    // }
   }
 }
 
@@ -798,25 +792,19 @@ function updateTileLayer()
   //ズーム倍率がzoomTileLayer以上
   if (zoomLevel >= zoomTileLayer)
   {
-    // if (changeTile != true)
-    // {
       changeTile = true;
 
       //タイルを切り替える
       map.removeLayer(tileLayer);
       inZoomTileLayer.addTo(map);
-    // }
   }
   else //ズーム倍率がzoomTileLayer未満
   {
-    // if (changeTile != false)
-    // {
       changeTile = false;
-      
+
       //タイルを切り替える
       map.removeLayer(inZoomTileLayer);
       tileLayer.addTo(map);
-    // }
   }
 }
 
