@@ -74,7 +74,8 @@ var map = L.map('map', {
     zoomSnap: 0.25,
     zoomDelta: 0.25,
     wheelPxPerZoomLevel: 120,
-    renderer: renderers
+    renderer: renderers,
+    maxBoundsViscosity: 1.0
 });
 
 //四隅のLeaflet座標を計算

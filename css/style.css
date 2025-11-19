@@ -39,10 +39,10 @@ html, body {
 /* 灰 */
 .icon-gray {
     filter: grayscale(100%) brightness(0.6)
-            drop-shadow(1px 1px 0 #fff)
+            /*drop-shadow(1px 1px 0 #fff)
             drop-shadow(-1px 1px 0 #fff)
             drop-shadow(1px -1px 0 #fff)
-            drop-shadow(-1px -1px 0 #fff);
+            drop-shadow(-1px -1px 0 #fff);*/
 }
 
 /* 座標表示のスタイル */
