@@ -129,34 +129,6 @@ var inZoomTileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
   zoomOffset: 5
 });
 
-var loader = L.DomUtil.get('loader');
-
-// setTimeoutのタイマーIDを保持するための変数を追加
-var loadTimer = null;
-
-// タイルの読み込み中
-tileLayer.on('loading', function() {
-  // 既にタイマーが動いていたらリセット
-  if (loadTimer) {
-    clearTimeout(loadTimer);
-  }
-  // 指定秒後にスピナーを表示するタイマーをセット
-  loadTimer = setTimeout(function() {
-    loader.style.display = 'flex'; // 指定秒数経過したらスピナーを表示
-  }, 3000); // ミリ秒単位
-});
-
-// すべてのタイルの読み込み完了
-tileLayer.on('load', function() {
-  // 5秒タイマーを解除
-  if (loadTimer) {
-    clearTimeout(loadTimer);
-    loadTimer = null;
-  }
-  // スピナーを非表示にする
-  loader.style.display = 'none';
-});
-
 map.fitBounds(bounds);
 
 map.setView(convertCoord(anchorLeafletY, anchorLeafletX), -1);
@@ -810,6 +782,41 @@ function updateTileLayer()
       tileLayer.addTo(map);
   }
 }
+
+function setupLayerSpinner(layer) {
+  //スピナー要素を取得
+  var loader = L.DomUtil.get('loader');
+
+  // setTimeoutのタイマーIDを保持するための変数を追加
+  var loadTimer = null;
+
+  // タイルの読み込み中
+  layer.on('loading', function() {
+    // 既にタイマーが動いていたらリセット
+    if (loadTimer) {
+      clearTimeout(loadTimer);
+    }
+    // 指定秒後にスピナーを表示するタイマーをセット
+    loadTimer = setTimeout(function() {
+      loader.style.display = 'flex'; // 指定秒数経過したらスピナーを表示
+    }, 3000); // ミリ秒単位
+  });
+
+  // すべてのタイルの読み込み完了
+  layer.on('load', function() {
+    // タイマーを解除
+    if (loadTimer) {
+      clearTimeout(loadTimer);
+      loadTimer = null;
+    }
+    // スピナーを非表示にする
+    loader.style.display = 'none';
+  });
+}
+
+// 両方のタイルレイヤーにスピナー処理を適用
+setupLayerSpinner(tileLayer);
+setupLayerSpinner(inZoomTileLayer);
 
 //マップがズームされた時にピンの表示/非表示を更新
 map.on('zoomend', updatePinVisibility);
