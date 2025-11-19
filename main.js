@@ -757,8 +757,8 @@ function convertCoord(x, z)
 
 //タイル切り替えのズーム倍率
 var zoomTileLayer = 0
-//タイル切り替えのフラグ
-var changeTile = true;
+//現在表示しているタイル
+var nowTileLayer = tileLayer;
 
 function updateTileLayer()
 {
@@ -767,56 +767,50 @@ function updateTileLayer()
   //ズーム倍率がzoomTileLayer以上
   if (zoomLevel >= zoomTileLayer)
   {
-      changeTile = true;
-
       //タイルを切り替える
       map.removeLayer(tileLayer);
       inZoomTileLayer.addTo(map);
+      nowTileLayer = inZoomTileLayer;
   }
   else //ズーム倍率がzoomTileLayer未満
   {
-      changeTile = false;
-
       //タイルを切り替える
       map.removeLayer(inZoomTileLayer);
       tileLayer.addTo(map);
+      nowTileLayer = tileLayer;
   }
 }
 
-function setupLayerSpinner(layer) {
-  //スピナー要素を取得
-  var loader = L.DomUtil.get('loader');
-
-  // setTimeoutのタイマーIDを保持するための変数を追加
-  var loadTimer = null;
-
-  // タイルの読み込み中
-  layer.on('loading', function() {
-    // 既にタイマーが動いていたらリセット
-    if (loadTimer) {
-      clearTimeout(loadTimer);
-    }
-    // 指定秒後にスピナーを表示するタイマーをセット
-    loadTimer = setTimeout(function() {
-      loader.style.display = 'flex'; // 指定秒数経過したらスピナーを表示
-    }, 3000); // ミリ秒単位
-  });
-
-  // すべてのタイルの読み込み完了
-  layer.on('load', function() {
-    // タイマーを解除
-    if (loadTimer) {
-      clearTimeout(loadTimer);
-      loadTimer = null;
-    }
-    // スピナーを非表示にする
-    loader.style.display = 'none';
-  });
-}
-
 // 両方のタイルレイヤーにスピナー処理を適用
-setupLayerSpinner(tileLayer);
-setupLayerSpinner(inZoomTileLayer);
+//スピナー要素を取得
+var loader = L.DomUtil.get('loader');
+
+// setTimeoutのタイマーIDを保持するための変数を追加
+var loadTimer = null;
+
+// タイルの読み込み中
+nowTileLayer.on('loading', function() {
+  // 既にタイマーが動いていたらリセット
+  if (loadTimer) {
+    clearTimeout(loadTimer);
+  }
+  // 指定秒後にスピナーを表示するタイマーをセット
+  loadTimer = setTimeout(function() {
+    loader.style.display = 'flex'; // 指定秒数経過したらスピナーを表示
+  }, 3000); // ミリ秒単位
+});
+
+// すべてのタイルの読み込み完了
+nowTileLayer.on('load', function() {
+  // タイマーを解除
+  if (loadTimer) {
+    clearTimeout(loadTimer);
+    loadTimer = null;
+  }
+  // スピナーを非表示にする
+  loader.style.display = 'none';
+});
+
 
 //マップがズームされた時にピンの表示/非表示を更新
 map.on('zoomend', updatePinVisibility);
