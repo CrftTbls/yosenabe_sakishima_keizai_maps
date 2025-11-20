@@ -756,62 +756,76 @@ function convertCoord(x, z)
   return [z * -1, x]
 }
 
-//タイル切り替えのズーム倍率
-var zoomTileLayer = 0
-//現在表示しているタイル
-var nowTileLayer = tileLayer;
-
-function updateTileLayer()
-{
-  var zoomLevel = map.getZoom();
-  console.log(zoomLevel);
-  //ズーム倍率がzoomTileLayer以上
-  if (zoomLevel >= zoomTileLayer)
-  {
-      //タイルを切り替える
-      map.removeLayer(tileLayer);
-      inZoomTileLayer.addTo(map);
-      nowTileLayer = inZoomTileLayer;
-  }
-  else //ズーム倍率がzoomTileLayer未満
-  {
-      //タイルを切り替える
-      map.removeLayer(inZoomTileLayer);
-      tileLayer.addTo(map);
-      nowTileLayer = tileLayer;
-  }
-}
-
-// 両方のタイルレイヤーにスピナー処理を適用
 //スピナー要素を取得
 var loader = L.DomUtil.get('loader');
-
-// setTimeoutのタイマーIDを保持するための変数を追加
 var loadTimer = null;
 
-// タイルの読み込み中
-nowTileLayer.on('loading', function() {
-  // 既にタイマーが動いていたらリセット
-  if (loadTimer) {
-    clearTimeout(loadTimer);
-  }
-  // 指定秒後にスピナーを表示するタイマーをセット
-  loadTimer = setTimeout(function() {
-    loader.style.display = 'flex'; // 指定秒数経過したらスピナーを表示
-  }, 3000); // ミリ秒単位
-});
-
-// すべてのタイルの読み込み完了
-nowTileLayer.on('load', function() {
-  // タイマーを解除
+//ローダーの状態を強制リセットする関数
+function resetLoader() {
   if (loadTimer) {
     clearTimeout(loadTimer);
     loadTimer = null;
   }
-  // スピナーを非表示にする
   loader.style.display = 'none';
-});
+}
 
+//読み込み開始時の処理
+function handleLoading() {
+  //既にタイマーが動いていたらリセット（重複防止）
+  if (loadTimer) {
+    clearTimeout(loadTimer);
+  }
+  //指定秒後にスピナーを表示するタイマーをセット
+  loadTimer = setTimeout(function() {
+    loader.style.display = 'flex';
+  }, 3000); //ミリ秒単位
+}
+
+//読み込み完了時の処理
+function handleLoad() {
+  resetLoader(); //完了したらタイマー解除して非表示
+}
+
+tileLayer.on('loading', handleLoading);
+tileLayer.on('load', handleLoad);
+
+inZoomTileLayer.on('loading', handleLoading);
+inZoomTileLayer.on('load', handleLoad);
+
+// タイル切り替えのズーム倍率
+var zoomTileLayer = 0;
+
+function updateTileLayer() {
+  var zoomLevel = map.getZoom();
+  console.log("Zoom Level:", zoomLevel);
+
+  //ズーム倍率が zoomTileLayer 以上の場合
+  if (zoomLevel >= zoomTileLayer) {
+    //既にinZoomTileLayerが表示されているなら何もしない（無駄な処理防止）
+    if (map.hasLayer(inZoomTileLayer)) return;
+
+    console.log("Switching to High-Res Layer");
+
+    //切り替え前にローダーをリセット
+    resetLoader();
+
+    map.removeLayer(tileLayer);
+    inZoomTileLayer.addTo(map);
+  }
+  //ズーム倍率がzoomTileLayer未満の場合
+  else {
+    //既にtileLayerが表示されているなら何もしない
+    if (map.hasLayer(tileLayer)) return;
+
+    console.log("Switching to Low-Res Layer");
+
+    //切り替え前にローダーをリセット
+    resetLoader();
+
+    map.removeLayer(inZoomTileLayer);
+    tileLayer.addTo(map);
+  }
+}
 
 //マップがズームされた時にピンの表示/非表示を更新
 map.on('zoomend', updatePinVisibility);
