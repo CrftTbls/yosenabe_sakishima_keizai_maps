@@ -166,8 +166,131 @@ map.setMaxBounds(bounds);
       shadowSize: [0, 0],
   });
 
+  //original
+  //スポーン地点アイコン
   var spawnIcon = new L.Icon({
-      
+    iconUrl: './images/icon/spawn-point.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -16],
+  });
+  //自動車学校アイコン
+  var drivingSchoolIcon = new L.Icon({
+    iconUrl: './images/icon/driving-school_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //白木蔵アイコン
+  var shirakiKuraIcon = new L.Icon({
+    iconUrl: './images/icon/warehouse_user.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //白木台盤所アイコン
+  var shirakiKitchenIcon = new L.Icon({
+    iconUrl: './images/icon/kitchen_user.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+
+  //offical
+  //公共駅アイコン
+  var stationOfficalIcon = new L.Icon({
+    iconUrl: './images/icon/train-station_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //ゲート施設アイコン
+  var gatewayIcon = new L.Icon({
+    iconUrl: './images/icon/gateway_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //アドミンショップアイコン
+  var adminShopIcon = new L.Icon({
+    iconUrl: './images/icon/store_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //公共ガソリンスタンドアイコン
+  var gasStationOfficalIcon = new L.Icon({
+    iconUrl: './images/icon/gas-pump_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //公共高速ICアイコン
+  var highwayICOfficalIcon = new L.Icon({
+    iconUrl: './images/icon/toll_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //公共飛行場アイコン
+  var airportOfficalIcon = new L.Icon({
+    iconUrl: './images/icon/air-port_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //公共フェリーターミナルアイコン
+  var ferryTerminalOfficalIcon = new L.Icon({
+    iconUrl: './images/icon/ship_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //公共宿屋アイコン
+  var innOfficalIcon = new L.Icon({
+    iconUrl: './images/icon/bed_offical.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+
+  //user
+  //私設駅アイコン
+  var stationUserIcon = new L.Icon({
+    iconUrl: './images/icon/train-station_user.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //ユーザー運営空港アイコン
+  var airportUserIcon = new L.Icon({
+    iconUrl: './images/icon/air-port_user.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+
+  //special occupation
+  //魔法店アイコン
+  var magicShopIcon = new L.Icon({
+    iconUrl: './images/icon/store_magic.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //自動車工場アイコン
+  var carGarageIcon = new L.Icon({
+    iconUrl: './images/icon/car-garage_car.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
+  //機械工場アイコン
+  var machineFactoryIcon = new L.Icon({
+    iconUrl: './images/icon/factory_machine.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
   });
 
   //ピン立て
@@ -180,7 +303,7 @@ map.setMaxBounds(bounds);
         name: "初期スポーン地点",
         x: 126,
         z: 255,
-        icon: grayIcon,
+        icon: spawnIcon,
         image: "./images/screenshot/spawn_point.webp",
         description: "このサーバーの初期スポーン地点。<br>\
                       スポーン後、後ろを向くとチュートリアルを開始するための書見台が置いてある。"
@@ -189,84 +312,84 @@ map.setMaxBounds(bounds);
         name: "黒輪駅",
         x: -10,
         z: 161,
-        icon: grayIcon,
+        icon: stationOfficalIcon,
         description: "黒輪の鉄道駅。<br>多数の路線が発着している。"
       },
       {
         name: "黒輪ゲート施設",
         x: 39,
         z: 174,
-        icon: grayIcon,
+        icon: gatewayIcon,
         description: "黒輪に設置されているゲート施設。<br>すべてのディメンジョンゲートが設置されている。"
       },
       {
         name: "黒輪飛行場",
         x: 336,
         z: 462,
-        icon: grayIcon,
+        icon: airportOfficalIcon,
         description: "黒輪に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。"
       },
       {
         name: "黒輪自動車学校",
         x: -30,
         z: 103,
-        icon: grayIcon,
+        icon: drivingSchoolIcon,
         description: "黒輪に設置されている自動車学校。<br>免許試験を受けることができ、練習も自由に行える。"
       },
       {
         name: "高速道路 黒輪IC",
         x: -89,
         z: 93,
-        icon: grayIcon,
+        icon: highwayICOfficalIcon,
         description: "高速道路の黒輪インターチェンジ。"
       },
       {
         name: "CESSO Express 黒輪店",
         x: -115,
         z: 311,
-        icon: grayIcon,
+        icon: gasStationOfficalIcon,
         description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。"
       },
       {
         name: "DOSMO ドスモ石油 黒輪店",
         x: -228,
         z: 347,
-        icon: grayIcon,
+        icon: gasStationOfficalIcon,
         description: "公共インフラとして運営されているガソリンスタンド。<br>小型車のみが使用できる。"
       },
       {
         name: "黒輪フェリーターミナル",
         x: -295,
         z: -19,
-        icon: grayIcon,
+        icon: ferryTerminalOfficalIcon,
         description: "黒輪に設置されているフェリーターミナル。<br>現在新天台行きの小型船が発着している。"
       },
       {
         name: "天狗の酒場 人狩行こうぜ!!",
         x: 48,
         z: 256,
-        icon: grayIcon,
+        icon: innOfficalIcon,
         description: "黒輪にある無料宿泊場。<br>人狩りを推奨しているが、実際には普通の酒場である。"
       },
       {
         name: "雑貨店 pono",
         x: -119,
         z: 258,
-        icon: purpleIcon,
+        icon: magicShopIcon,
         description: "ポノポノ/ponopono1103 が運営する雑貨店。<br>飲食品やその他消耗品の他、魔法関係の対応も行っている。"
       },
       {
         name: "白猫だんぼーる るなるんらいと",
         x: -190,
         z: 300,
-        icon: purpleIcon,
+        icon: magicShopIcon,
         description: "クラフちゃん/Crafchan が運営する魔法店。<br>魔法依頼チケットを取り扱っている他、冒険で拾ってきたであろうアイテムの販売ガチャが置いてある。"
       },
       {
         name: "cafe&magic shop aomochi",
         x: 63,
         z: 194,
-        icon: purpleIcon,
+        icon: magicShopIcon,
         description: "みずもち/ao_mochi が運営するカフェ兼魔法店。"
       },
 
@@ -276,42 +399,42 @@ map.setMaxBounds(bounds);
         name: "白木駅",
         x: -32,
         z: 876,
-        icon: grayIcon,
+        icon: stationOfficalIcon,
         description: "白木の鉄道駅。<br>町長が寝落ちした時のためのコマンドブロックがある。"
       },
       {
         name: "白木アドミンショップ",
         x: -21,
         z: 886,
-        icon: grayIcon,
+        icon: adminShopIcon,
         description: "白木に設置されているアドミンショップ。<br>バニラ作物、Farmer's Delightの作物、漆modの作物を売却することができる。"
       },
       {
         name: "CESSO Express 白木店",
         x: 29,
         z: 847,
-        icon: grayIcon,
+        icon: gasStationOfficalIcon,
         description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。"
       },
       {
         name: "白木蔵",
         x: -101,
         z: 1020,
-        icon: greenIcon,
+        icon: shirakiKuraIcon,
         description: "白木町が運営する一次生産品の保管用蔵。<br>町民であれば誰でも保管、消費が可能。"
       },
       {
         name: "白木台盤所",
         x: -72,
         z: 1019,
-        icon: greenIcon,
+        icon: shirakiKitchenIcon,
         description: "白木町が運営する公共キッチン。<br>一回300円で利用可能で、町民は無料。"
       },
       {
         name: "Tricorne とんがり帽子",
         x: -74,
         z: 979,
-        icon: purpleIcon,
+        icon: magicShopIcon,
         description: "こけ/k0kesam が運営する魔法店。<br>様々な魔道具を取り扱っている。"
       },
 
@@ -321,21 +444,21 @@ map.setMaxBounds(bounds);
         name: "穂樽駅",
         x: -456,
         z: 835,
-        icon: grayIcon,
+        icon: stationOfficalIcon,
         description: "穂樽の鉄道駅。<br>地下鉄のみが発着する。"
       },
       {
         name: "穂樽ゲート施設",
         x: -486,
         z: 840,
-        icon: grayIcon,
+        icon: gatewayIcon,
         description: "穂樽に設置されているゲート施設。<br>ミラーオーバーワールド、ネザーのゲートが設置されている。"
       },
       {
         name: "穂樽アドミンショップ",
         x: -418,
         z: 906,
-        icon: grayIcon,
+        icon: adminShopIcon,
         description: "穂樽に設置されているアドミンショップ。<br>高額商品の購入が可能。"
       },
 
@@ -345,14 +468,14 @@ map.setMaxBounds(bounds);
         name: "猫ノ原アドミンショップ",
         x: -625,
         z: 1390,
-        icon: grayIcon,
+        icon: adminShopIcon,
         description: "猫ノ原に設置されているアドミンショップ。<br>各種鉱石を売却することが可能。<br>なお、<b>売却回数には制限がある。</b>"
       },
       {
         name: "猫草精工本社工場",
         x: -720,
         z: 1325,
-        icon: grayIcon,
+        icon: machineFactoryIcon,
         description: "猫草精工の本社工場。<br>IE機械を用いた鉱石粉砕をメイン業務として、様々な仕事を行っている。"
       },
 
@@ -362,21 +485,21 @@ map.setMaxBounds(bounds);
         name: "蔵太駅",
         x: -622,
         z: 2026,
-        icon: grayIcon,
+        icon: stationOfficalIcon,
         description: "蔵太の鉄道駅。<br>湾を挟んで向こう岸に渡る路線が発着している。"
       },
       {
         name: "プロスタック",
         x: -523,
         z: 1999,
-        icon: grayIcon,
+        icon: adminShopIcon,
         description: "蔵太に設置されているアドミンショップ。<br>石材や自然由来のブロックを売却することが可能。"
       },
       {
         name: "カメリ",
         x: -488,
         z: 1962,
-        icon: grayIcon,
+        icon: adminShopIcon,
         description: "蔵太に設置されているアドミンショップ。<br>各種苗木を売却可能。"
       },
 
@@ -386,70 +509,70 @@ map.setMaxBounds(bounds);
         name: "南成田駅",
         x: 1146,
         z: -1486,
-        icon: grayIcon,
+        icon: stationOfficalIcon,
         description: "南成田の鉄道駅。"
       },
       {
         name: "アドミンショップ南成田店",
         x: 1079,
         z: -1465,
-        icon: grayIcon,
+        icon: adminShopIcon,
         description: "南成田に設置されているアドミンショップ。"
       },
       {
         name: "南成田ゲート施設",
         x: 1080,
         z: -1495,
-        icon: grayIcon,
+        icon: gatewayIcon,
         description: "南成田に設置されているゲート施設。<br>ミラーオーバーワールドゲートが設置されている。<br><b>ホワイトリスト制になっており、ホワイトリストに入っていない人は利用できない。</b>"
       },
       {
         name: "高速道路 南成田IC",
         x: 1260,
         z: -1677,
-        icon: grayIcon,
+        icon: highwayICOfficalIcon,
         description: "高速道路の南成田インターチェンジ。"
       },
       {
         name: "麹浜駅",
         x: 1034,
         z: -1621,
-        icon: greenIcon,
+        icon: stationUserIcon,
         description: "南成田の鉄道駅。"
       },
       {
         name: "穴餅稲荷駅",
         x: 1320,
         z: -1770,
-        icon: greenIcon,
+        icon: stationUserIcon,
         description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
       },
       {
         name: "天空橋駅",
         x: 1431,
         z: -1657,
-        icon: greenIcon,
+        icon: stationUserIcon,
         description: "南成田の鉄道駅。"
       },
       {
         name: "白浜横丁駅",
         x: 1017,
         z: -1260,
-        icon: greenIcon,
+        icon: stationUserIcon,
         description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
       },
       {
         name: "南成田飛行場",
         x: 1525,
         z: -1756,
-        icon: greenIcon,
+        icon: airportUserIcon,
         description: "南成田に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。"
       },
       {
         name: "成田重工業株式会社 車輛整備工場",
         x: 1196,
         z: -1699,
-        icon: blueIcon,
+        icon: carGarageIcon,
         description: "成田重工業株式会社が運営する車輛整備工場。<br>車輛の修理、改造を行っている。"
       },
 
@@ -459,8 +582,18 @@ map.setMaxBounds(bounds);
         name: "新天台フェリーターミナル",
         x: -1900,
         z: 368,
-        icon: grayIcon,
+        icon: ferryTerminalOfficalIcon,
         description: "新天台に設置されているフェリーターミナル。<br>現在黒輪行きの小型船が発着している。"
+      },
+
+      //町域外
+
+      {
+        name: "春野駅",
+        x: -55,
+        z: 559,
+        icon: stationOfficalIcon,
+        description: "生命線の停車駅の一つ。<br>どの町域にも属さない小規模な駅。"
       }
     ];
 
