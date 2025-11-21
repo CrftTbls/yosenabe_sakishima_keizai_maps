@@ -166,6 +166,10 @@ map.setMaxBounds(bounds);
       shadowSize: [0, 0],
   });
 
+  var spawnIcon = new L.Icon({
+      
+  });
+
   //ピン立て
   {
     var markerDataList = [
@@ -177,7 +181,7 @@ map.setMaxBounds(bounds);
         x: 126,
         z: 255,
         icon: grayIcon,
-        image: "./images/spawn_point.webp",
+        image: "./images/screenshot/spawn_point.webp",
         description: "このサーバーの初期スポーン地点。<br>\
                       スポーン後、後ろを向くとチュートリアルを開始するための書見台が置いてある。"
       },
