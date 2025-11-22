@@ -294,7 +294,7 @@ map.setMaxBounds(bounds);
   });
   //貿易所アイコン
   var tradeCenterIcon = new L.Icon({
-    iconUrl: './images/icon/user_basket_trade.png',
+    iconUrl: './images/icon/user-basket_trade.png',
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -16],
@@ -599,7 +599,7 @@ map.setMaxBounds(bounds);
         x: 1017,
         z: -1260,
         icon: stationUserIcon,
-        image: "./images/screenshot/minaminarita_shirahamayokochou_station.webp",
+        image: "./images/screenshot/minaminarita_shirahamayokocho_station.webp",
         description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
       },
       {
@@ -619,12 +619,12 @@ map.setMaxBounds(bounds);
         description: "成田重工業株式会社が運営する車輛整備工場。<br>車輛の修理、改造を行っている。"
       },
       {
-        name: "kig貿易所",
+        name: "kig貿易店",
         x: 1207,
         z: -1538,
         icon: tradeCenterIcon,
         image: "./images/screenshot/kigtrade.webp",
-        description: "きぐ/kig16 が運営する貿易所。"
+        description: "きぐ/kig16 が運営する貿易店。"
       },
       {
         name: "黒レンガ魔法店",
@@ -636,10 +636,10 @@ map.setMaxBounds(bounds);
       },
       {
         name: "霊力研究所",
-        x: 1120,
-        z: -1590,
+        x: 1200,
+        z: -1450,
         icon: magicShopIcon,
-        image: "./images/screenshot/element_laboratory.webp",
+        image: "./images/screenshot/element_raboratory.webp",
         description: "しらす/cirrus9289 が運営する漆魔法研究所。<br>店内に霊力充填機が設置されている。"
       },
 
