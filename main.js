@@ -604,7 +604,7 @@ map.setMaxBounds(bounds);
       var popupHTML = `
           <image src="${data.image}" alt="${data.name}" style="max-width:100%;height:auto;"><br>
           <h3>${data.name}</h3>
-          <p>${data.description}<br><b>座標: Z=${data.z}, X=${data.x}</b></p>
+          <p>${data.description}<br><div class="coord"><b>座標: Z=${data.z}, X=${data.x}</b></div></p>
         `
 
       var marker = L.marker(convertCoord(data.x, data.z), {icon: data.icon} )
