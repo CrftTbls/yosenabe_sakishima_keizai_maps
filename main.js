@@ -835,16 +835,12 @@ map.setMaxBounds(bounds);
   //南成田
 
   var minaminaritaPoly = L.polygon([
-      convertCoord(938, -1230),
+      convertCoord(938, -1113),
       convertCoord(938, -1450),
       convertCoord(776, -1450),
-      convertCoord(776, -2635),
-      convertCoord(1076, -2635),
-      convertCoord(1076, -2228),
-      convertCoord(1773, -2228),
-      convertCoord(1773, -1803),
-      convertCoord(1614, -1803),
-      convertCoord(1614, -1237),
+      convertCoord(776, -2634),
+      convertCoord(1762, -2634),
+      convertCoord(1762, -1113),
     ], {
       color: 'limegreen',
       weight: lineWeight,
