@@ -292,6 +292,13 @@ map.setMaxBounds(bounds);
     iconAnchor: [16, 16],
     popupAnchor: [0, -16],
   });
+  //貿易所アイコン
+  var tradeCenterIcon = new L.Icon({
+    iconUrl: './images/icon/user_basket_trade.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
 
   //ピン立て
   {
@@ -313,6 +320,7 @@ map.setMaxBounds(bounds);
         x: -10,
         z: 161,
         icon: stationOfficalIcon,
+        image: "./images/screenshot/kurowa_station.webp",
         description: "黒輪の鉄道駅。<br>多数の路線が発着している。"
       },
       {
@@ -320,6 +328,7 @@ map.setMaxBounds(bounds);
         x: -12,
         z: 240,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_kurowa.webp",
         description: "黒輪に設置されているアドミンショップ。<br>各種冒険で採取できる用品を売却したり、報酬を受け取ることが可能。"
       },
       {
@@ -327,6 +336,7 @@ map.setMaxBounds(bounds);
         x: 39,
         z: 174,
         icon: gatewayIcon,
+        image: "./images/screenshot/kurowa_gateway.webp",
         description: "黒輪に設置されているゲート施設。<br>すべてのディメンジョンゲートが設置されている。"
       },
       {
@@ -334,20 +344,15 @@ map.setMaxBounds(bounds);
         x: 336,
         z: 462,
         icon: airportOfficalIcon,
+        image: "./images/screenshot/airport_kurowa.webp",
         description: "黒輪に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。"
-      },
-      {
-        name: "黒輪自動車学校",
-        x: -30,
-        z: 103,
-        icon: drivingSchoolIcon,
-        description: "黒輪に設置されている自動車学校。<br>免許試験を受けることができ、練習も自由に行える。"
       },
       {
         name: "高速道路 黒輪IC",
         x: -89,
         z: 93,
         icon: highwayICOfficalIcon,
+        image: "./images/screenshot/kurowa_ic.webp",
         description: "高速道路の黒輪インターチェンジ。"
       },
       {
@@ -355,6 +360,7 @@ map.setMaxBounds(bounds);
         x: -115,
         z: 311,
         icon: gasStationOfficalIcon,
+        image: "./images/screenshot/cesso_kurowa.webp",
         description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。"
       },
       {
@@ -362,6 +368,7 @@ map.setMaxBounds(bounds);
         x: -228,
         z: 347,
         icon: gasStationOfficalIcon,
+        image: "./images/screenshot/dosmo_kurowa.webp",
         description: "公共インフラとして運営されているガソリンスタンド。<br>小型車のみが使用できる。"
       },
       {
@@ -369,6 +376,7 @@ map.setMaxBounds(bounds);
         x: -295,
         z: -19,
         icon: ferryTerminalOfficalIcon,
+        image: "./images/screenshot/ferry_kurowa.webp",
         description: "黒輪に設置されているフェリーターミナル。<br>現在新天台行きの小型船が発着している。"
       },
       {
@@ -376,6 +384,7 @@ map.setMaxBounds(bounds);
         x: 48,
         z: 256,
         icon: innOfficalIcon,
+        image: "./images/screenshot/tengu_hotel.webp",
         description: "黒輪にある無料宿泊場。<br>人狩りを推奨しているが、実際には普通の酒場である。"
       },
       {
@@ -383,6 +392,7 @@ map.setMaxBounds(bounds);
         x: -119,
         z: 258,
         icon: magicShopIcon,
+        image: "./images/screenshot/pono.webp",
         description: "ポノポノ/ponopono1103 が運営する雑貨店。<br>飲食品やその他消耗品の他、魔法関係の対応も行っている。"
       },
       {
@@ -390,6 +400,7 @@ map.setMaxBounds(bounds);
         x: -190,
         z: 300,
         icon: magicShopIcon,
+        image: "./images/screenshot/lunalu'n_light.webp",
         description: "クラフちゃん/Crafchan が運営する魔法店。<br>魔法依頼チケットを取り扱っている他、冒険で拾ってきたであろうアイテムの販売ガチャが置いてある。"
       },
       {
@@ -397,6 +408,7 @@ map.setMaxBounds(bounds);
         x: 63,
         z: 194,
         icon: magicShopIcon,
+        image: "./images/screenshot/aomochi.webp",
         description: "みずもち/ao_mochi が運営するカフェ兼魔法店。"
       },
 
@@ -407,6 +419,7 @@ map.setMaxBounds(bounds);
         x: -32,
         z: 876,
         icon: stationOfficalIcon,
+        image: "./images/screenshot/shiraki_station.webp",
         description: "白木の鉄道駅。<br>町長が寝落ちした時のためのコマンドブロックがある。"
       },
       {
@@ -414,6 +427,7 @@ map.setMaxBounds(bounds);
         x: -21,
         z: 886,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_shiraki.webp",
         description: "白木に設置されているアドミンショップ。<br>バニラ作物、Farmer's Delightの作物、漆modの作物を売却することができる。"
       },
       {
@@ -421,6 +435,7 @@ map.setMaxBounds(bounds);
         x: 29,
         z: 847,
         icon: gasStationOfficalIcon,
+        image: "./images/screenshot/cesso_shiraki.webp",
         description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。"
       },
       {
@@ -428,6 +443,7 @@ map.setMaxBounds(bounds);
         x: -101,
         z: 1020,
         icon: shirakiKuraIcon,
+        image: "./images/screenshot/shiraki_kura.webp",
         description: "白木町が運営する一次生産品の保管用蔵。<br>町民であれば誰でも保管、消費が可能。"
       },
       {
@@ -435,6 +451,7 @@ map.setMaxBounds(bounds);
         x: -72,
         z: 1019,
         icon: shirakiKitchenIcon,
+        image: "./images/screenshot/shiraki_kitchen.webp",
         description: "白木町が運営する公共キッチン。<br>一回300円で利用可能で、町民は無料。"
       },
       {
@@ -442,6 +459,7 @@ map.setMaxBounds(bounds);
         x: -74,
         z: 979,
         icon: magicShopIcon,
+        image: "./images/screenshot/tricorne.webp",
         description: "こけ/k0kesam が運営する魔法店。<br>様々な魔道具を取り扱っている。"
       },
 
@@ -452,6 +470,7 @@ map.setMaxBounds(bounds);
         x: -456,
         z: 835,
         icon: stationOfficalIcon,
+        image: "./images/screenshot/hotaru_station.webp",
         description: "穂樽の鉄道駅。<br>地下鉄のみが発着する。"
       },
       {
@@ -459,6 +478,7 @@ map.setMaxBounds(bounds);
         x: -486,
         z: 840,
         icon: gatewayIcon,
+        image: "./images/screenshot/hotaru_gateway.webp",
         description: "穂樽に設置されているゲート施設。<br>ミラーオーバーワールド、ネザーのゲートが設置されている。"
       },
       {
@@ -466,6 +486,7 @@ map.setMaxBounds(bounds);
         x: -418,
         z: 906,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_hotaru.webp",
         description: "穂樽に設置されているアドミンショップ。<br>高額商品の購入が可能。"
       },
 
@@ -476,6 +497,7 @@ map.setMaxBounds(bounds);
         x: -625,
         z: 1390,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_nekonohara.webp",
         description: "猫ノ原に設置されているアドミンショップ。<br>各種鉱石を売却することが可能。<br>なお、<b>売却回数には制限がある。</b>"
       },
       {
@@ -483,6 +505,7 @@ map.setMaxBounds(bounds);
         x: -720,
         z: 1325,
         icon: machineFactoryIcon,
+        image: "./images/screenshot/factory_nekokusa.webp",
         description: "猫草精工の本社工場。<br>IE機械を用いた鉱石粉砕をメイン業務として、様々な仕事を行っている。"
       },
 
@@ -493,6 +516,7 @@ map.setMaxBounds(bounds);
         x: -622,
         z: 2026,
         icon: stationOfficalIcon,
+        image: "./images/screenshot/kurafuto_station.webp",
         description: "蔵太の鉄道駅。<br>湾を挟んで向こう岸に渡る路線が発着している。"
       },
       {
@@ -500,6 +524,7 @@ map.setMaxBounds(bounds);
         x: -523,
         z: 1999,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_prostack.webp",
         description: "蔵太に設置されているアドミンショップ。<br>石材や自然由来のブロックを売却することが可能。"
       },
       {
@@ -507,6 +532,7 @@ map.setMaxBounds(bounds);
         x: -488,
         z: 1962,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_kameri.webp",
         description: "蔵太に設置されているアドミンショップ。<br>各種苗木を売却可能。"
       },
 
@@ -517,6 +543,7 @@ map.setMaxBounds(bounds);
         x: 1146,
         z: -1486,
         icon: stationOfficalIcon,
+        image: "./images/screenshot/minaminarita_station.webp",
         description: "南成田の鉄道駅。"
       },
       {
@@ -524,6 +551,7 @@ map.setMaxBounds(bounds);
         x: 1079,
         z: -1465,
         icon: adminShopIcon,
+        image: "./images/screenshot/adminshop_minaminarita.webp",
         description: "南成田に設置されているアドミンショップ。"
       },
       {
@@ -531,6 +559,7 @@ map.setMaxBounds(bounds);
         x: 1080,
         z: -1495,
         icon: gatewayIcon,
+        image: "./images/screenshot/minaminarita_gateway.webp",
         description: "南成田に設置されているゲート施設。<br>ミラーオーバーワールドゲートが設置されている。<br><b>ホワイトリスト制になっており、ホワイトリストに入っていない人は利用できない。</b>"
       },
       {
@@ -538,6 +567,7 @@ map.setMaxBounds(bounds);
         x: 1260,
         z: -1677,
         icon: highwayICOfficalIcon,
+        image: "./images/screenshot/minaminarita_ic.webp",
         description: "高速道路の南成田インターチェンジ。"
       },
       {
@@ -545,6 +575,7 @@ map.setMaxBounds(bounds);
         x: 1034,
         z: -1621,
         icon: stationUserIcon,
+        image: "./images/screenshot/minaminarita_kojihama_station.webp",
         description: "南成田の鉄道駅。"
       },
       {
@@ -552,6 +583,7 @@ map.setMaxBounds(bounds);
         x: 1320,
         z: -1770,
         icon: stationUserIcon,
+        image: "./images/screenshot/minaminarita_anamochiinari_station.webp",
         description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
       },
       {
@@ -559,6 +591,7 @@ map.setMaxBounds(bounds);
         x: 1431,
         z: -1657,
         icon: stationUserIcon,
+        image: "./images/screenshot/minaminarita_tenkubashi_station.webp",
         description: "南成田の鉄道駅。"
       },
       {
@@ -566,6 +599,7 @@ map.setMaxBounds(bounds);
         x: 1017,
         z: -1260,
         icon: stationUserIcon,
+        image: "./images/screenshot/minaminarita_shirahamayokochou_station.webp",
         description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
       },
       {
@@ -573,6 +607,7 @@ map.setMaxBounds(bounds);
         x: 1525,
         z: -1756,
         icon: airportUserIcon,
+        image: "./images/screenshot/airport_minaminarita.webp",
         description: "南成田に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。"
       },
       {
@@ -580,7 +615,32 @@ map.setMaxBounds(bounds);
         x: 1196,
         z: -1699,
         icon: carGarageIcon,
+        image: "./images/screenshot/car_garage_narita.webp",
         description: "成田重工業株式会社が運営する車輛整備工場。<br>車輛の修理、改造を行っている。"
+      },
+      {
+        name: "kig貿易所",
+        x: 1207,
+        z: -1538,
+        icon: tradeCenterIcon,
+        image: "./images/screenshot/kigtrade.webp",
+        description: "きぐ/kig16 が運営する貿易所。"
+      },
+      {
+        name: "黒レンガ魔法店",
+        x: 1082,
+        z: -1448,
+        icon: magicShopIcon,
+        image: "./images/screenshot/black_brick_magic.webp",
+        description: "しらす/cirrus9289 が運営する魔法店。<br>様々な魔道具を取り扱っているほか、竜鋼の受注も行っている。"
+      },
+      {
+        name: "霊力研究所",
+        x: 1120,
+        z: -1590,
+        icon: magicShopIcon,
+        image: "./images/screenshot/element_laboratory.webp",
+        description: "しらす/cirrus9289 が運営する漆魔法研究所。<br>店内に霊力充填機が設置されている。"
       },
 
       //新天台
@@ -590,6 +650,7 @@ map.setMaxBounds(bounds);
         x: -1900,
         z: 368,
         icon: ferryTerminalOfficalIcon,
+        image: "./images/screenshot/ferry_shintendai.webp",
         description: "新天台に設置されているフェリーターミナル。<br>現在黒輪行きの小型船が発着している。"
       },
 
@@ -600,6 +661,7 @@ map.setMaxBounds(bounds);
         x: -55,
         z: 559,
         icon: stationOfficalIcon,
+        image: "./images/screenshot/haruno_station.webp",
         description: "生命線の停車駅の一つ。<br>どの町域にも属さない小規模な駅。"
       }
     ];
