@@ -385,7 +385,7 @@ map.setMaxBounds(bounds);
         z: 256,
         icon: innOfficalIcon,
         image: "./images/screenshot/tengu_hotel.webp",
-        description: "黒輪にある無料宿泊場。<br>人狩りを推奨しているが、実際には普通の酒場である。"
+        description: "黒輪にある無料宿泊場。<br>酒場の入り口は道路沿いに、宿泊所の入り口は裏手の公園にある。"
       },
       {
         name: "雑貨店 pono",
@@ -496,6 +496,14 @@ map.setMaxBounds(bounds);
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_hotaru.webp",
         description: "穂樽に設置されているアドミンショップ。<br>高額商品の購入が可能。"
+      },
+      {
+        name: "SNP本社工場",
+        x: -797,
+        z: 652,
+        icon: machineFactoryIcon,
+        image: "./images/screenshot/factory_snp.webp",
+        description: "SNP株式会社の本社工場。<br>多数の機械を使用した巨大自動粉砕精錬ラインを構築している。"
       },
 
       //猫ノ原
@@ -785,10 +793,10 @@ map.setMaxBounds(bounds);
   //猫ノ原
 
   var nekonoharaPoly = L.polygon([
-      convertCoord(-808, 1247),
-      convertCoord(-581, 1247),
-      convertCoord(-581, 1415),
-      convertCoord(-808, 1415)
+      convertCoord(-797, 1247),
+      convertCoord(-560, 1247),
+      convertCoord(-560, 1415),
+      convertCoord(-797, 1415)
     ], {
       color: 'black',
       weight: lineWeight,
