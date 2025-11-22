@@ -431,6 +431,14 @@ map.setMaxBounds(bounds);
         description: "白木に設置されているアドミンショップ。<br>バニラ作物、Farmer's Delightの作物、漆modの作物を売却することができる。"
       },
       {
+        name: "高速道路 白木IC",
+        x: 353,
+        z: 1367,
+        icon: highwayICOfficalIcon,
+        image: "./images/screenshot/shiraki_ic.webp",
+        description: "高速道路の白木インターチェンジ。"
+      },
+      {
         name: "CESSO Express 白木店",
         x: 29,
         z: 847,
@@ -564,8 +572,8 @@ map.setMaxBounds(bounds);
       },
       {
         name: "高速道路 南成田IC",
-        x: 1260,
-        z: -1677,
+        x: 1124,
+        z: -1572,
         icon: highwayICOfficalIcon,
         image: "./images/screenshot/minaminarita_ic.webp",
         description: "高速道路の南成田インターチェンジ。"
@@ -673,7 +681,7 @@ map.setMaxBounds(bounds);
       var popupHTML = `
           <image src="${data.image}" alt="${data.name}" style="max-width:100%;height:auto;"><br>
           <h3>${data.name}</h3>
-          <p>${data.description}<br><div class="coord"><b>座標: Z=${data.z}, X=${data.x}</b></div></p>
+          <p>${data.description}<br><div class="coord"><b>座標: X=${data.x}, Z=${data.z}</b></div></p>
         `
 
       var marker = L.marker(convertCoord(data.x, data.z), {icon: data.icon} )
@@ -735,8 +743,10 @@ map.setMaxBounds(bounds);
   var shirakiPoly = L.polygon([
       convertCoord(-186, 822),
       convertCoord(323, 822),
-      convertCoord(323, 1345),
-      convertCoord(-186, 1345)
+      convertCoord(323, 1010),
+      convertCoord(402, 1010),
+      convertCoord(402, 1401),
+      convertCoord(-186, 1401)
     ], {
       color: 'white',
       weight: lineWeight,
