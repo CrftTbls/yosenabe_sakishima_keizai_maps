@@ -316,6 +316,13 @@ map.setMaxBounds(bounds);
         description: "黒輪の鉄道駅。<br>多数の路線が発着している。"
       },
       {
+        name: "黒輪アドミンショップ",
+        x: -12,
+        z: 240,
+        icon: adminShopIcon,
+        description: "黒輪に設置されているアドミンショップ。<br>各種冒険で採取できる用品を売却したり、報酬を受け取ることが可能。"
+      },
+      {
         name: "黒輪ゲート施設",
         x: 39,
         z: 174,
