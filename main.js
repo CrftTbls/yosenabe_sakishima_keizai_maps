@@ -606,7 +606,7 @@ map.setMaxBounds(bounds);
         x: 1034,
         z: -1621,
         icon: stationUserIcon,
-        image: "./images/screenshot/minaminarita_kojihama_station.webp",
+        image: "./images/screenshot/minaminarita_koujihama_station.webp",
         description: "南成田の鉄道駅。"
       },
       {
