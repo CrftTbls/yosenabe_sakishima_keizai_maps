@@ -319,8 +319,8 @@ map.setMaxBounds(bounds);
         z: 255,
         icon: spawnIcon,
         image: "./images/screenshot/spawn_point.webp",
-        description: "このサーバーの初期スポーン地点。<br>\
-                      スポーン後、後ろを向くとチュートリアルを開始するための書見台が置いてある。"
+        description: "このサーバーの初期スポーン地点。<br>スポーン後、後ろを向くとチュートリアルを開始するための書見台が置いてある。",
+        url: "https://www.youtube.com/watch?v=1t1O0_adZkY&pp=2AYB"
       },
       {
         name: "黒輪駅",
@@ -328,7 +328,8 @@ map.setMaxBounds(bounds);
         z: 161,
         icon: stationOfficalIcon,
         image: "./images/screenshot/kurowa_station.webp",
-        description: "黒輪の鉄道駅。<br>多数の路線が発着している。"
+        description: "黒輪の鉄道駅。<br>多数の路線が発着している。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.2ittt159tlo0"
       },
       {
         name: "黒輪アドミンショップ",
@@ -336,7 +337,8 @@ map.setMaxBounds(bounds);
         z: 240,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_kurowa.webp",
-        description: "黒輪に設置されているアドミンショップ。<br>各種冒険で採取できる用品を売却したり、報酬を受け取ることが可能。"
+        description: "黒輪に設置されているアドミンショップ。<br>各種冒険で採取できる用品を売却したり、報酬を受け取ることが可能。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.gjrjie4ofs42"
       },
       {
         name: "黒輪ゲート施設",
@@ -344,7 +346,8 @@ map.setMaxBounds(bounds);
         z: 174,
         icon: gatewayIcon,
         image: "./images/screenshot/kurowa_gateway.webp",
-        description: "黒輪に設置されているゲート施設。<br>すべてのディメンジョンゲートが設置されている。"
+        description: "黒輪に設置されているゲート施設。<br>すべてのディメンジョンゲートが設置されている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.m3i4c2782x2u"
       },
       {
         name: "黒輪飛行場",
@@ -352,7 +355,8 @@ map.setMaxBounds(bounds);
         z: 462,
         icon: airportOfficalIcon,
         image: "./images/screenshot/airport_kurowa.webp",
-        description: "黒輪に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。"
+        description: "黒輪に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.cplwypycellr"
       },
       {
         name: "高速道路 黒輪IC",
@@ -360,7 +364,8 @@ map.setMaxBounds(bounds);
         z: 93,
         icon: highwayICOfficalIcon,
         image: "./images/screenshot/kurowa_ic.webp",
-        description: "高速道路の黒輪インターチェンジ。"
+        description: "高速道路の黒輪インターチェンジ。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.xqcnmbrtg2jn"
       },
       {
         name: "CESSO Express 黒輪店",
@@ -368,7 +373,8 @@ map.setMaxBounds(bounds);
         z: 311,
         icon: gasStationOfficalIcon,
         image: "./images/screenshot/cesso_kurowa.webp",
-        description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。"
+        description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.9vyzz3eatn32"
       },
       {
         name: "DOSMO ドスモ石油 黒輪店",
@@ -376,7 +382,8 @@ map.setMaxBounds(bounds);
         z: 347,
         icon: gasStationOfficalIcon,
         image: "./images/screenshot/dosmo_kurowa.webp",
-        description: "公共インフラとして運営されているガソリンスタンド。<br>小型車のみが使用できる。"
+        description: "公共インフラとして運営されているガソリンスタンド。<br>小型車のみが使用できる。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.z2jbs4cpj6zw"
       },
       {
         name: "黒輪フェリーターミナル",
@@ -384,7 +391,8 @@ map.setMaxBounds(bounds);
         z: -19,
         icon: ferryTerminalOfficalIcon,
         image: "./images/screenshot/ferry_kurowa.webp",
-        description: "黒輪に設置されているフェリーターミナル。<br>現在新天台行きの小型船が発着している。"
+        description: "黒輪に設置されているフェリーターミナル。<br>現在新天台行きの小型船が発着している。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.ccfidan7s1ko"
       },
       {
         name: "天狗の酒場 人狩行こうぜ!!",
@@ -392,7 +400,8 @@ map.setMaxBounds(bounds);
         z: 256,
         icon: innOfficalIcon,
         image: "./images/screenshot/tengu_hotel.webp",
-        description: "黒輪にある無料宿泊場。<br>酒場の入り口は道路沿いに、宿泊所の入り口は裏手の公園にある。"
+        description: "黒輪にある無料宿泊場。<br>酒場の入り口は道路沿いに、宿泊所の入り口は裏手の公園にある。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.tzu2noneovyg"
       },
       {
         name: "雑貨店 pono",
@@ -400,7 +409,8 @@ map.setMaxBounds(bounds);
         z: 258,
         icon: magicShopIcon,
         image: "./images/screenshot/pono.webp",
-        description: "ポノポノ/ponopono1103 が運営する雑貨店。<br>飲食品やその他消耗品の他、魔法関係の対応も行っている。"
+        description: "ポノポノ/ponopono1103 が運営する雑貨店。<br>飲食品やその他消耗品の他、魔法関係の対応も行っている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.xb2tod6gly58"
       },
       {
         name: "白猫だんぼーる るなるんらいと",
@@ -408,7 +418,8 @@ map.setMaxBounds(bounds);
         z: 300,
         icon: magicShopIcon,
         image: "./images/screenshot/lunalu'n_light.webp",
-        description: "クラフちゃん/Crafchan が運営する魔法店。<br>魔法依頼チケットを取り扱っている他、冒険で拾ってきたであろうアイテムの販売ガチャが置いてある。"
+        description: "クラフちゃん/Crafchan が運営する魔法店。<br>魔法依頼チケットを取り扱っている他、冒険で拾ってきたであろうアイテムの販売ガチャが置いてある。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.ig9el33phgts"
       },
       {
         name: "cafe&magic shop aomochi",
@@ -416,7 +427,8 @@ map.setMaxBounds(bounds);
         z: 194,
         icon: magicShopIcon,
         image: "./images/screenshot/aomochi.webp",
-        description: "みずもち/ao_mochi が運営するカフェ兼魔法店。"
+        description: "みずもち/ao_mochi が運営するカフェ兼魔法店。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E9%BB%92%E8%BC%AA?authuser=0#h.dsovuubm4j8m"
       },
 
       //白木
@@ -427,7 +439,8 @@ map.setMaxBounds(bounds);
         z: 876,
         icon: stationOfficalIcon,
         image: "./images/screenshot/shiraki_station.webp",
-        description: "白木の鉄道駅。<br>町長が寝落ちした時のためのコマンドブロックがある。"
+        description: "白木の鉄道駅。<br>町長が寝落ちした時のためのコマンドブロックがある。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.dp84rfipnbm4"
       },
       {
         name: "白木アドミンショップ",
@@ -435,7 +448,8 @@ map.setMaxBounds(bounds);
         z: 886,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_shiraki.webp",
-        description: "白木に設置されているアドミンショップ。<br>バニラ作物、Farmer's Delightの作物、漆modの作物を売却することができる。"
+        description: "白木に設置されているアドミンショップ。<br>バニラ作物、Farmer's Delightの作物、漆modの作物を売却することができる。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.2eee0aimnfe1"
       },
       {
         name: "高速道路 白木IC",
@@ -443,7 +457,8 @@ map.setMaxBounds(bounds);
         z: 1367,
         icon: highwayICOfficalIcon,
         image: "./images/screenshot/shiraki_ic.webp",
-        description: "高速道路の白木インターチェンジ。"
+        description: "高速道路の白木インターチェンジ。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.3s77mcgs8lf5"
       },
       {
         name: "CESSO Express 白木店",
@@ -451,7 +466,8 @@ map.setMaxBounds(bounds);
         z: 847,
         icon: gasStationOfficalIcon,
         image: "./images/screenshot/cesso_shiraki.webp",
-        description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。"
+        description: "公共インフラとして運営されているガソリンスタンド。<br>セルフサービス式で24時間営業。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.rd46v4dqph7n"
       },
       {
         name: "白木蔵",
@@ -459,7 +475,8 @@ map.setMaxBounds(bounds);
         z: 1020,
         icon: shirakiKuraIcon,
         image: "./images/screenshot/shiraki_kura.webp",
-        description: "白木町が運営する一次生産品の保管用蔵。<br>町民であれば誰でも保管、消費が可能。"
+        description: "白木町が運営する一次生産品の保管用蔵。<br>町民であれば誰でも保管、消費が可能。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.jvbtgxi7n9vt"
       },
       {
         name: "白木台盤所",
@@ -467,7 +484,8 @@ map.setMaxBounds(bounds);
         z: 1019,
         icon: shirakiKitchenIcon,
         image: "./images/screenshot/shiraki_kitchen.webp",
-        description: "白木町が運営する公共キッチン。<br>一回300円で利用可能で、町民は無料。"
+        description: "白木町が運営する公共キッチン。<br>一回300円で利用可能で、町民は無料。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.m4qvd1fzyg8w"
       },
       {
         name: "白木スポナー施設",
@@ -475,7 +493,8 @@ map.setMaxBounds(bounds);
         z: 975,
         icon: shirakiSpawnerIcon,
         image: "./images/screenshot/spawner_shiraki.webp",
-        description: "白木町が運営するスポナー施設。<br>一般公開されている。"
+        description: "白木町が運営するスポナー施設。<br>一般公開されている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.nui55p6xor2c"
       },
       {
         name: "Tricorne とんがり帽子",
@@ -483,7 +502,8 @@ map.setMaxBounds(bounds);
         z: 979,
         icon: magicShopIcon,
         image: "./images/screenshot/tricorne.webp",
-        description: "こけ/k0kesam が運営する魔法店。<br>様々な魔道具を取り扱っている。"
+        description: "こけ/k0kesam が運営する魔法店。<br>様々な魔道具を取り扱っている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%99%BD%E6%9C%A8?authuser=0#h.lksu0rremc30"
       },
 
       //穂樽
@@ -494,7 +514,8 @@ map.setMaxBounds(bounds);
         z: 835,
         icon: stationOfficalIcon,
         image: "./images/screenshot/hotaru_station.webp",
-        description: "穂樽の鉄道駅。<br>地下鉄のみが発着する。"
+        description: "穂樽の鉄道駅。<br>地下鉄のみが発着する。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%A9%82%E6%A8%BD?authuser=0#h.zceocpxvgojd"
       },
       {
         name: "穂樽ゲート施設",
@@ -502,7 +523,8 @@ map.setMaxBounds(bounds);
         z: 840,
         icon: gatewayIcon,
         image: "./images/screenshot/hotaru_gateway.webp",
-        description: "穂樽に設置されているゲート施設。<br>ミラーオーバーワールド、ネザーのゲートが設置されている。"
+        description: "穂樽に設置されているゲート施設。<br>ミラーオーバーワールド、ネザーのゲートが設置されている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%A9%82%E6%A8%BD?authuser=0#h.qftbfdqrphlt"
       },
       {
         name: "穂樽アドミンショップ",
@@ -510,7 +532,8 @@ map.setMaxBounds(bounds);
         z: 906,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_hotaru.webp",
-        description: "穂樽に設置されているアドミンショップ。<br>高額商品の購入が可能。"
+        description: "穂樽に設置されているアドミンショップ。<br>高額商品の購入が可能。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%A9%82%E6%A8%BD?authuser=0#h.gjnn6rdqrdph"
       },
       {
         name: "SNP本社工場",
@@ -518,7 +541,8 @@ map.setMaxBounds(bounds);
         z: 652,
         icon: machineFactoryIcon,
         image: "./images/screenshot/factory_snp.webp",
-        description: "SNP株式会社の本社工場。<br>多数の機械を使用した巨大自動粉砕精錬ラインを構築している。"
+        description: "SNP株式会社の本社工場。<br>多数の機械を使用した巨大自動粉砕精錬ラインを構築している。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%A9%82%E6%A8%BD?authuser=0#h.evczq2yjtowf"
       },
 
       //猫ノ原
@@ -529,7 +553,8 @@ map.setMaxBounds(bounds);
         z: 1390,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_nekonohara.webp",
-        description: "猫ノ原に設置されているアドミンショップ。<br>各種鉱石を売却することが可能。<br>なお、<b>売却回数には制限がある。</b>"
+        description: "猫ノ原に設置されているアドミンショップ。<br>各種鉱石を売却することが可能。<br>なお、<b>売却回数には制限がある。</b>",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%8C%AB%E3%83%8E%E5%8E%9F?authuser=0#h.yg6w0xp70z73"
       },
       {
         name: "猫草精工本社工場",
@@ -537,7 +562,8 @@ map.setMaxBounds(bounds);
         z: 1325,
         icon: machineFactoryIcon,
         image: "./images/screenshot/factory_nekokusa.webp",
-        description: "猫草精工の本社工場。<br>IE機械を用いた鉱石粉砕をメイン業務として、様々な仕事を行っている。"
+        description: "猫草精工の本社工場。<br>IE機械を用いた鉱石粉砕をメイン業務として、様々な仕事を行っている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E7%8C%AB%E3%83%8E%E5%8E%9F?authuser=0#h.jjmilo5nwr7i"
       },
 
       //蔵太
@@ -548,7 +574,8 @@ map.setMaxBounds(bounds);
         z: 2026,
         icon: stationOfficalIcon,
         image: "./images/screenshot/kurafuto_station.webp",
-        description: "蔵太の鉄道駅。<br>湾を挟んで向こう岸に渡る路線が発着している。"
+        description: "蔵太の鉄道駅。<br>湾を挟んで向こう岸に渡る路線が発着している。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E8%94%B5%E5%A4%AA?authuser=0#h.lzgbu2janvsz"
       },
       {
         name: "プロスタック",
@@ -556,7 +583,8 @@ map.setMaxBounds(bounds);
         z: 1999,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_prostack.webp",
-        description: "蔵太に設置されているアドミンショップ。<br>石材や自然由来のブロックを売却することが可能。"
+        description: "蔵太に設置されているアドミンショップ。<br>石材や自然由来のブロックを売却することが可能。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E8%94%B5%E5%A4%AA?authuser=0#h.mq56khkcmwpa"
       },
       {
         name: "カメリ",
@@ -564,7 +592,8 @@ map.setMaxBounds(bounds);
         z: 1962,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_kameri.webp",
-        description: "蔵太に設置されているアドミンショップ。<br>各種苗木を売却可能。"
+        description: "蔵太に設置されているアドミンショップ。<br>各種苗木を売却可能。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E8%94%B5%E5%A4%AA?authuser=0#h.ekkp4emd12ku"
       },
 
       //南成田
@@ -575,7 +604,8 @@ map.setMaxBounds(bounds);
         z: -1486,
         icon: stationOfficalIcon,
         image: "./images/screenshot/minaminarita_station.webp",
-        description: "南成田の鉄道駅。"
+        description: "南成田の鉄道駅。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.e4cn5qenb9vk"
       },
       {
         name: "アドミンショップ南成田店",
@@ -583,7 +613,8 @@ map.setMaxBounds(bounds);
         z: -1465,
         icon: adminShopIcon,
         image: "./images/screenshot/adminshop_minaminarita.webp",
-        description: "南成田に設置されているアドミンショップ。"
+        description: "南成田に設置されているアドミンショップ。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.im6qcai1wci"
       },
       {
         name: "南成田ゲート施設",
@@ -591,7 +622,8 @@ map.setMaxBounds(bounds);
         z: -1495,
         icon: gatewayIcon,
         image: "./images/screenshot/minaminarita_gateway.webp",
-        description: "南成田に設置されているゲート施設。<br>ミラーオーバーワールドゲートが設置されている。<br><b>ホワイトリスト制になっており、ホワイトリストに入っていない人は利用できない。</b>"
+        description: "南成田に設置されているゲート施設。<br>ミラーオーバーワールドゲートが設置されている。<br><b>ホワイトリスト制になっており、ホワイトリストに入っていない人は利用できない。</b>",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.ujas2fc9pzzz"
       },
       {
         name: "高速道路 南成田IC",
@@ -599,7 +631,8 @@ map.setMaxBounds(bounds);
         z: -1572,
         icon: highwayICOfficalIcon,
         image: "./images/screenshot/minaminarita_ic.webp",
-        description: "高速道路の南成田インターチェンジ。"
+        description: "高速道路の南成田インターチェンジ。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.pkhf7ydx3745"
       },
       {
         name: "麹浜駅",
@@ -607,7 +640,8 @@ map.setMaxBounds(bounds);
         z: -1621,
         icon: stationUserIcon,
         image: "./images/screenshot/minaminarita_koujihama_station.webp",
-        description: "南成田の鉄道駅。"
+        description: "南成田の鉄道駅。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.w0ekix12ghf5"
       },
       {
         name: "穴餅稲荷駅",
@@ -615,7 +649,8 @@ map.setMaxBounds(bounds);
         z: -1770,
         icon: stationUserIcon,
         image: "./images/screenshot/minaminarita_anamochiinari_station.webp",
-        description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
+        description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.ysxii6yvwqra"
       },
       {
         name: "天空橋駅",
@@ -623,7 +658,8 @@ map.setMaxBounds(bounds);
         z: -1657,
         icon: stationUserIcon,
         image: "./images/screenshot/minaminarita_tenkubashi_station.webp",
-        description: "南成田の鉄道駅。"
+        description: "南成田の鉄道駅。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.elag4jzeuxn8"
       },
       {
         name: "白浜横丁駅",
@@ -631,7 +667,8 @@ map.setMaxBounds(bounds);
         z: -1260,
         icon: stationUserIcon,
         image: "./images/screenshot/minaminarita_shirahamayokocho_station.webp",
-        description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。"
+        description: "南成田の鉄道駅。<br>ホームのみ存在し、駅舎は未完成。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.223f3u4ckwj3"
       },
       {
         name: "南成田飛行場",
@@ -639,7 +676,8 @@ map.setMaxBounds(bounds);
         z: -1756,
         icon: airportUserIcon,
         image: "./images/screenshot/airport_minaminarita.webp",
-        description: "南成田に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。"
+        description: "南成田に設置されている飛行場。<br>広大な土地を有しているが現在未稼働。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.gw5nwdyjkdh8"
       },
       {
         name: "成田重工業株式会社 車輛整備工場",
@@ -647,7 +685,8 @@ map.setMaxBounds(bounds);
         z: -1699,
         icon: carGarageIcon,
         image: "./images/screenshot/car_garage_narita.webp",
-        description: "成田重工業株式会社が運営する車輛整備工場。<br>車輛の修理、改造を行っている。"
+        description: "成田重工業株式会社が運営する車輛整備工場。<br>車輛の修理、改造を行っている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.9uyg9ndwywzd"
       },
       {
         name: "kig貿易店",
@@ -655,7 +694,8 @@ map.setMaxBounds(bounds);
         z: -1538,
         icon: tradeCenterIcon,
         image: "./images/screenshot/kigtrade.webp",
-        description: "きぐ/kig16 が運営する貿易店。"
+        description: "きぐ/kig16 が運営する貿易店。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.becnr8d6tqlv"
       },
       {
         name: "黒レンガ魔法店",
@@ -663,7 +703,8 @@ map.setMaxBounds(bounds);
         z: -1448,
         icon: magicShopIcon,
         image: "./images/screenshot/black_brick_magic.webp",
-        description: "しらす/cirrus9289 が運営する魔法店。<br>様々な魔道具を取り扱っているほか、竜鋼の受注も行っている。"
+        description: "しらす/cirrus9289 が運営する魔法店。<br>様々な魔道具を取り扱っているほか、竜鋼の受注も行っている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.e83vqsruhxpn"
       },
       {
         name: "霊力研究所",
@@ -671,7 +712,8 @@ map.setMaxBounds(bounds);
         z: -1450,
         icon: magicShopIcon,
         image: "./images/screenshot/element_raboratory.webp",
-        description: "しらす/cirrus9289 が運営する漆魔法研究所。<br>店内に霊力充填機が設置されている。"
+        description: "しらす/cirrus9289 が運営する漆魔法研究所。<br>店内に霊力充填機が設置されている。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.p4635ao37hsp"
       },
 
       //新天台
@@ -682,7 +724,8 @@ map.setMaxBounds(bounds);
         z: 368,
         icon: ferryTerminalOfficalIcon,
         image: "./images/screenshot/ferry_shintendai.webp",
-        description: "新天台に設置されているフェリーターミナル。<br>現在黒輪行きの小型船が発着している。"
+        description: "新天台に設置されているフェリーターミナル。<br>現在黒輪行きの小型船が発着している。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E6%96%B0%E5%A4%A9%E5%8F%B0?authuser=0#h.qn3cqxfbf4l5"
       },
 
       //町域外
@@ -693,7 +736,35 @@ map.setMaxBounds(bounds);
         z: 559,
         icon: stationOfficalIcon,
         image: "./images/screenshot/haruno_station.webp",
-        description: "生命線の停車駅の一つ。<br>どの町域にも属さない小規模な駅。"
+        description: "生命線の停車駅の一つ。<br>どの町域にも属さない小規模な駅。",
+        url: ""
+      },
+      {
+        name: "ぽの農場前駅",
+        x: -356,
+        z: 473,
+        icon: stationOfficalIcon,
+        image: "./images/screenshot/ponofarm_station.webp",
+        description: "海岸線の停車駅の一つ。<br>目の前にぽの農場がある小規模な駅。",
+        url: ""
+      },
+      {
+        name: "穂樽海岸駅",
+        x: -527,
+        z: 525,
+        icon: stationOfficalIcon,
+        image: "./images/screenshot/hotarusea_station.webp",
+        description: "海岸線の停車駅の一つ。<br>下の砂浜にはカメがたくさんいる。",
+        url: ""
+      },
+      {
+        name: "汐見入口駅",
+        x: -896,
+        z: 700,
+        icon: stationOfficalIcon,
+        image: "./images/screenshot/shiomien_station.webp",
+        description: "海岸線の停車駅の一つ。<br>汐見と穂樽の間に位置する。",
+        url: ""
       }
     ];
 
@@ -704,7 +775,8 @@ map.setMaxBounds(bounds);
       var popupHTML = `
           <image src="${data.image}" alt="${data.name}" style="max-width:100%;height:auto;"><br>
           <h3>${data.name}</h3>
-          <p>${data.description}<br><div class="coord"><b>座標: X=${data.x}, Z=${data.z}</b></div></p>
+          <p>${data.description}<br></p>
+          <div class="coord"><span><b>座標: X=${data.x}, Z=${data.z}</b></span><a href=${data.url} target="_blank" class="right">wikiで詳細を見る</a></div>
         `
 
       var marker = L.marker(convertCoord(data.x, data.z), {icon: data.icon} )

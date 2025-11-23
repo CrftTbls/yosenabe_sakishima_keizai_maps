@@ -96,6 +96,11 @@ html, body {
     font-size: 1.0em;
 }
 
+/* ポップアップ内の右寄せテキストのスタイル */
+.leaflet-popup-content .right {
+    float: right;
+}
+
 /* ポップアップ内の見出しと画像の余白調整 */
 .leaflet-popup-content :is(h3, image){
     margin: 0 3px;
@@ -103,7 +108,7 @@ html, body {
 
 /* ポップアップ内の段落の余白調整 */
 .leaflet-popup-content :is(p, div) {
-    margin: 5px 3px 0 3px;
+    margin: 5px 3px 5px 3px;
 }
 
 .leaflet-popup-content image {
