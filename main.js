@@ -721,6 +721,16 @@ map.setMaxBounds(bounds);
         url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.p4635ao37hsp"
       },
 
+      //轟谷
+      {
+        name: "轟谷駅",
+        x: 609,
+        z: 601,
+        icon: stationOfficalIcon,
+        image: "./images/screenshot/gouya_station.webp",
+        description: "轟谷の鉄道駅。<br>生命線の終着点。",
+      },
+
       //新天台
 
       {
