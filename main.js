@@ -195,6 +195,13 @@ map.setMaxBounds(bounds);
     iconAnchor: [16, 16],
     popupAnchor: [0, -16],
   });
+  //白木スポナー施設アイコン
+  var shirakiSpawnerIcon = new L.Icon({
+    iconUrl: './images/icon/role-play_user.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16],
+  });
 
   //offical
   //公共駅アイコン
@@ -461,6 +468,14 @@ map.setMaxBounds(bounds);
         icon: shirakiKitchenIcon,
         image: "./images/screenshot/shiraki_kitchen.webp",
         description: "白木町が運営する公共キッチン。<br>一回300円で利用可能で、町民は無料。"
+      },
+      {
+        name: "白木スポナー施設",
+        x: 100,
+        z: 975,
+        icon: shirakiSpawnerIcon,
+        image: "./images/screenshot/spawner_shiraki.webp",
+        description: "白木町が運営するスポナー施設。<br>一般公開されている。"
       },
       {
         name: "Tricorne とんがり帽子",
