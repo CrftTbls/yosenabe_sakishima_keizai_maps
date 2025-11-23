@@ -91,7 +91,9 @@ var bounds = [ [bottomRightY, topLeftX], [topLeftY, bottomRightX] ];
 var tileMaxNativeZoom = 6;
 
 // タイルレイヤーの追加
-var attribution = '崎島経済サーバーマップ<br>Icon made by Freepik from <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>';
+var attribution = `崎島経済サーバーマップ
+  <br>Icon made by Freepik from <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>
+  <br><span id="notuse">崎島経済サーバーに関わる場所以外での利用を禁止します</span>`;
 
 var tileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
   attribution: attribution,

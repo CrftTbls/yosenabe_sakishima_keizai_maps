@@ -15,6 +15,10 @@ html, body {
     margin: 0;
 }
 
+#notuse {
+    color: red;
+}
+
 /* ピン色 */
 /* 青 */
 .icon-blue {
