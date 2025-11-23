@@ -729,6 +729,7 @@ map.setMaxBounds(bounds);
         icon: stationOfficalIcon,
         image: "./images/screenshot/gouya_station.webp",
         description: "轟谷の鉄道駅。<br>生命線の終着点。",
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E8%BD%9F%E8%B0%B7?authuser=0#h.tnckicmzchke"
       },
 
       //新天台
@@ -752,7 +753,7 @@ map.setMaxBounds(bounds);
         icon: stationOfficalIcon,
         image: "./images/screenshot/haruno_station.webp",
         description: "生命線の停車駅の一つ。<br>どの町域にも属さない小規模な駅。",
-        url: ""
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E7%94%BA%E5%9F%9F%E5%A4%96%E6%96%BD%E8%A8%AD?authuser=0#h.nmmjii3xlwc1"
       },
       {
         name: "ぽの農場前駅",
@@ -761,7 +762,7 @@ map.setMaxBounds(bounds);
         icon: stationOfficalIcon,
         image: "./images/screenshot/ponofarm_station.webp",
         description: "海岸線の停車駅の一つ。<br>目の前にぽの農場がある小規模な駅。",
-        url: ""
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E7%94%BA%E5%9F%9F%E5%A4%96%E6%96%BD%E8%A8%AD?authuser=0#h.i30okxrtmjn2"
       },
       {
         name: "穂樽海岸駅",
@@ -770,7 +771,7 @@ map.setMaxBounds(bounds);
         icon: stationOfficalIcon,
         image: "./images/screenshot/hotarusea_station.webp",
         description: "海岸線の停車駅の一つ。<br>下の砂浜にはカメがたくさんいる。",
-        url: ""
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E7%94%BA%E5%9F%9F%E5%A4%96%E6%96%BD%E8%A8%AD?authuser=0#h.v8rppz69zh2v"
       },
       {
         name: "汐見入口駅",
@@ -779,7 +780,7 @@ map.setMaxBounds(bounds);
         icon: stationOfficalIcon,
         image: "./images/screenshot/shiomien_station.webp",
         description: "海岸線の停車駅の一つ。<br>汐見と穂樽の間に位置する。",
-        url: ""
+        url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E7%94%BA%E5%9F%9F%E5%A4%96%E6%96%BD%E8%A8%AD?authuser=0#h.14zlofo53sx8"
       }
     ];
 
