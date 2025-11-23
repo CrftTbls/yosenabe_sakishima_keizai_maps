@@ -45,11 +45,22 @@ html, body {
             drop-shadow(-1px -1px 0 #fff);*/
 }
 
-/* 座標表示のスタイル */
-.leaflet-control-attribution .map-coordinates {
-    padding: 4px 4px 8px 6px;
-    border-radius: 3px;
-    font-size: 13px;  /* "Leaflet" の文字サイズに合わせる */
+/* 帰属表示のスタイル */
+.leaflet-container .leaflet-control-attribution {
+    text-align: right;
+    padding: 4px 4px 2px 4px;
+}
+
+/* 画面左上の座標表示ボックスのスタイル */
+.coordinate-box {
+    background-color: rgba(255, 255, 255, 1); /* 半透明の白背景 */
+    margin: 0;
+    padding: 5px 10px;        /* 内側の余白 */
+    border-radius: 2px;       /* 角を丸く */
+    border: 2px solid rgba(0,0,0,0.9); /* 薄い枠線 */
+    font-size: 14px;          /* 文字サイズ */
+    font-weight: bold;        /* 太字 */
+    color: #333;              /* 文字色 */
 }
 
 /* スピナーを画面中央に配置するための全画面オーバーレイ */

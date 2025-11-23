@@ -90,8 +90,11 @@ var bounds = [ [bottomRightY, topLeftX], [topLeftY, bottomRightX] ];
 
 var tileMaxNativeZoom = 6;
 
+// タイルレイヤーの追加
+var attribution = '崎島経済サーバーマップ<br>Icon made by Freepik from <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>';
+
 var tileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
-  attribution: '崎島経済サーバーマップ',
+  attribution: attribution,
   // bounds: bounds,
   noWrap: true,
 
@@ -111,7 +114,7 @@ var tileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
 }).addTo(map);
 
 var inZoomTileLayer = L.tileLayer('tiles/{z}/{x}/{y}.webp', {
-  attribution: '崎島経済サーバーマップ',
+  attribution: attribution,
   // bounds: bounds,
   noWrap: true,
 
@@ -1142,6 +1145,34 @@ map.on('zoomend', updateTileLayer);
 updatePinVisibility();
 updateTileLayer();
 
+
+// 右上 ('topright') に配置する空のコントロールを作成
+var coordControl = L.control({ position: 'topright' });
+
+// コントロールが地図に追加される時の処理
+coordControl.onAdd = function() {
+    // div要素を作成し、style.cssで定義したクラス 'coordinate-box' を付与
+    this._div = L.DomUtil.create('div', 'coordinate-box');
+
+    // 初期表示のテキスト
+    this.update();
+    return this._div;
+};
+
+// 中身を更新する関数を定義
+coordControl.update = function(htmlContent) {
+    if (htmlContent) {
+        this._div.innerHTML = htmlContent;
+        this._div.style.display = 'block'; // 内容がある時は表示
+    } else {
+        this._div.innerHTML = 'マウスをマップに合わせてください'; // 案内文（お好みで）
+        // または this._div.style.display = 'none'; // マウスが外れたら消す場合
+    }
+};
+
+// マップに追加
+coordControl.addTo(map);
+
 // 連続して呼ばれる関数を、指定した時間（limit）に1回だけ実行するように制限する
 function throttle(func, limit) {
   let inThrottle;
@@ -1162,15 +1193,9 @@ map.on('mousemove', throttle(function(e) {
     var gameZ = Math.floor(e.latlng.lat) * -1;
     var gameX = Math.floor(e.latlng.lng);
 
-    // 表示するHTML文字列を作成 (step2 で定義したクラス名)
-    var coordHtml = '<span class="map-coordinates">' + 'X=' + gameX + ', Z=' + gameZ + '</span>';
+    // 表示するHTMLを作成
+        var html = 'Z=' + gameZ + ', X=' + gameX;
 
-    // ★帰属表示コントロール（"Leaflet" の文字）の「前」にHTMLを設定
-    map.attributionControl.setPrefix(coordHtml);
+    // ★右上のコントロールを更新
+    coordControl.update(html);
 }), 250); // 指定ミリ秒に1回だけ実行
-
-//マウスがマップから外れたら表示をリセット
-map.on('mouseout', function(e) {
-    // ★テキストを空に設定
-    map.attributionControl.setPrefix('');
-});
