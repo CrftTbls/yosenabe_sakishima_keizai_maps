@@ -640,7 +640,7 @@ map.setMaxBounds(bounds);
         url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.pkhf7ydx3745"
       },
       {
-        name: "麹浜駅",
+        name: "糀浜駅",
         x: 1034,
         z: -1621,
         icon: stationUserIcon,
@@ -649,7 +649,7 @@ map.setMaxBounds(bounds);
         url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.w0ekix12ghf5"
       },
       {
-        name: "穴餅稲荷駅",
+        name: "穴持稲荷駅",
         x: 1320,
         z: -1770,
         icon: stationUserIcon,
