@@ -627,7 +627,7 @@ map.setMaxBounds(bounds);
         z: -1495,
         icon: gatewayIcon,
         image: "./images/screenshot/minaminarita_gateway.webp",
-        description: "南成田に設置されているゲート施設。<br>ミラーオーバーワールドゲートが設置されている。<br><b>ホワイトリスト制になっており、ホワイトリストに入っていない人は利用できない。</b>",
+        description: "南成田に設置されているゲート施設。<br>ミラーオーバーワールドゲートが設置されている。",
         url: "https://sites.google.com/view/yosenabekeizai-wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%83%E3%83%97%E6%83%85%E5%A0%B1/%E5%90%84%E7%94%BA%E6%83%85%E5%A0%B1/%E5%8D%97%E6%88%90%E7%94%B0?authuser=0#h.ujas2fc9pzzz"
       },
       {
